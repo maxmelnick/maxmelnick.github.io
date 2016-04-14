@@ -1,0 +1,19 @@
+.post {
+	.post-content{
+		ul {
+			padding-top: 15px
+		}
+	}
+}
+
+.center-img {
+	text-align: center
+}
+
+.img-circle {
+	border-radius: 50%
+}
+
+article.about p, article.about li {
+	@extend .post-excerpt;
+}

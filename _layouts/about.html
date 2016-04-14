@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<main class="content" role="main">
+    <article class="about">
+        <header class="blog-header">
+            <amp-img class="img-circle" height="200" src="/assets/images/author.jpg" width="200">
+            </amp-img>
+            <h1 class="blog-title">
+                Max Melnick
+            </h1>
+            <div class="post-meta">
+                <a href="mailto:maxmelnick@gmail.com">maxmelnick@gmail.com</a> | (202) 505-1122 | NYC
+            </div>
+        </header>
+        {{content}}
+    </article>
+    <!-- <div class="cf frame">
+    {% for post in paginator.posts %}
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+        <div class="article-item">
+          <header class="post-header">
+            <h2 class="post-title" itemprop="name"><a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
+          </header>
+          <section class="post-excerpt" itemprop="description">
+            <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+          </section>
+          <div class="post-meta">
+            <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+  </div> -->
+</main>
+{% include footer.html %}

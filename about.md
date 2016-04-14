@@ -1,32 +1,49 @@
 ---
-layout: page
+layout: about
 title: About
 permalink: /about/
 ---
 
-<amp-img width="600" height="300" layout="responsive" src="http://lorempixel.com/600/300/sports"></amp-img>
+# OVERVIEW
+I am passionate about making a positive impact by creating technology products with my strong blend of technical and business skills. I have 6+ years of experience in the federal public service industry and consumer products industry focusing on technology product development, enterprise architecture, and business intelligence.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac augue libero.
-Fusce ac tempor dolor. Ut est dui, gravida a consequat aliquet, fermentum
-sodales risus. Suspendisse eu arcu id mi ornare facilisis non id nisl. Maecenas
-nec congue arcu, non semper neque. Proin mollis nisl diam, eu ultrices diam
-facilisis et. Integer fringilla lorem quis semper venenatis.
+I also enjoy sports / exercise, travel, cooking/eating, reading, listening to podcasts, and most importantly, learning new things!
 
-Aliquam vestibulum purus enim. Sed rhoncus interdum erat id consequat. Nulla
-cursus venenatis massa, quis convallis lacus condimentum vel. Etiam mollis,
-orci ac pharetra commodo, diam lectus hendrerit eros, ac elementum magna augue
-sed tellus. Maecenas molestie, nisi ut sodales scelerisque, purus neque
-imperdiet dui, mollis elementum sem augue vel ipsum. Nulla lacinia arcu at quam
-lobortis, vitae interdum tellus fermentum. Cum sociis natoque penatibus et
-magnis dis parturient montes, nascetur ridiculus mus. Fusce sodales semper erat,
-eu fringilla ligula vulputate id. Maecenas quis libero pellentesque lacus
-egestas vehicula sit amet et neque. Nulla nec facilisis sem. Pellentesque rutrum
-elementum molestie. Quisque eget dui ac quam placerat dictum. Suspendisse quis
-ante placerat, efficitur enim ut, commodo tortor. Etiam consequat, eros quis
-consequat congue, augue mauris molestie libero, sed iaculis lectus enim eu magna.
+# EXPERIENCE
 
-Etiam sapien dolor, mattis vel feugiat nec, egestas eget risus. Lorem ipsum
-dolor sit amet, consectetur adipiscing elit. Aenean aliquam massa a est porta
- vehicula. Cras eu gravida massa. Integer non sem ac mi ultrices posuere a
- pretium tortor. Mauris vitae varius sem. Praesent faucibus nec felis et dictum.
- Vestibulum lorem velit, laoreet nec vestibulum in, varius nec enim.
+### DELOITTE CONSULTING LLP
+
+*2008 - present \| Senior Consultant - Technology Services (previous: Summer Scholar, Business Technology Analyst, Consultant)*
+
+- Consistent top-performer
+- Engineering Manager of web application development team comprised of on-site and remote members, responsible for managing full application life cycle from strategy to execution (e.g., owning roadmap, backlog management, stakeholder coordination, requirements gathering, design/development, usage analytics, infrastructure management, continuous improvement)
+- BI/Analytics development with Tableau
+- Experience as Scrum Master and fullstack developer
+- Experience presenting to council of CIOs
+- Led effort to re-architect Oracle APEX web application to support more effective search, performance, and usability using Elasticsearch, Angular, and Node
+- Led SAML single-sign-on implementation for web application
+- Led migration from physical data center infrastructure to private cloud data center infrastructure which saved client over 70% of yearly hosting costs and increased flexibility and scalability of the application
+- Developed strategy for a unified approach to technology software use across the client's organization
+Responsible for Section 508 accessibility testing
+- Experience leading and supporting large firm initiatives for business development, recruiting, and culture development
+
+### UNDER ARMOUR
+
+*Summer 2007 \| Business Intelligence Rookie*
+
+- One of 30 “Rookies” hired for summer 2007 out of 1,200 applicants
+- Worked closely with other departments such as sales, finance, and supply chain to develop SAP Business Warehouse reports that facilitate analysis of performance against key business metrics
+
+
+### UNIVERSITY OF VIRGINIA RECREATIONAL SPORTS DEPARTMENT
+*2006 - 2009 \| Personal Trainer*
+
+- Developed and implemented training programs and health assessments to improve client physical fitness
+- Created online calendar for Fitness Assessment room reservations
+
+# EDUCATION
+
+
+### UNIVERSITY OF VIRGINIA
+
+*2005 - 2009* \| B.S. in Systems Engineering with Highest Distinction
