@@ -18,7 +18,7 @@ paginate:	5 # The number of posts to show per page on your homepage
 
 name: 'Max Melnick'
 bio: >
-  I am passionate about creating technology products, sports / fitness, travel, cooking, and learning new things.
+  I am passionate about technology, sports / fitness, travel, cooking, and learning new things.
 author_image: "assets/images/author.jpg"
 #twitter_username: maxmelnick
 github_username: maxmelnick
