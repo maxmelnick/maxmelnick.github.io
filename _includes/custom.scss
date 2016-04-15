@@ -15,5 +15,10 @@
 }
 
 article.about p, article.about li {
-	@extend .post-excerpt;
+	letter-spacing: -0.02em;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.59;
+    color: #666665;
 }

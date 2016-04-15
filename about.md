@@ -18,7 +18,7 @@ I also enjoy sports / exercise, travel, cooking/eating, reading, listening to po
 - Consistent top-performer
 - Engineering Manager of web application development team comprised of on-site and remote members, responsible for managing full application life cycle from strategy to execution (e.g., owning roadmap, backlog management, stakeholder coordination, requirements gathering, design/development, usage analytics, infrastructure management, continuous improvement)
 - BI/Analytics development with Tableau
-- Experience as Scrum Master and fullstack developer
+- Experience as Certified Scrum Master (Scrum Alliance) and fullstack developer
 - Experience presenting to council of CIOs
 - Led effort to re-architect Oracle APEX web application to support more effective search, performance, and usability using Elasticsearch, Angular, and Node
 - Led SAML single-sign-on implementation for web application
