@@ -47,3 +47,13 @@ Responsible for Section 508 accessibility testing
 ### UNIVERSITY OF VIRGINIA
 
 *2005 - 2009* \| B.S. in Systems Engineering with Highest Distinction
+
+# SKILLS
+
+### TECHNICAL
+
+JIRA, Node, Angular, Bootstrap CSS, Grunt, Elasticsearch, AWS, Sublime Text, Oracle 11g database, Tableau, SQL, JavaScript, CSS/SASS, HTML, Python
+
+### FUNCTIONAL
+
+Leadership, Project Management, Communication, Agile development, Developing others, Analytical, Lean Startup, Recruiting, Business Development, Culture Development, Enterprise Architecture

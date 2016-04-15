@@ -14,11 +14,15 @@
 	border-radius: 50%
 }
 
-article.about p, article.about li {
+.about p, .about li {
 	letter-spacing: -0.02em;
     font-weight: 300;
     font-style: normal;
     font-size: 18px;
     line-height: 1.59;
     color: #666665;
+}
+
+.about header {
+	margin-bottom: 50px;
 }

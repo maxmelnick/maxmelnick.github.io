@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ribbon Cutting
+title: Ribbon Cutting (under construction)
 ---
 
 Thanks for stopping by! I'm excited to share my Metis NYC Data Science Bootcamp journey to becoming a data scientist. In this "Ribbon Cutting" post, I'll give you some background on myself, explain what Data Science is, tell you about my motivation for doing the Bootcamp, and explain some of details of the Bootcamp. Going forward, I'm planning to write a new post every few weeks.

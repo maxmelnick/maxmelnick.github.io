@@ -19,6 +19,7 @@
 
   <style amp-custom>
   {% capture include_to_scssify %}
+    {% include bootstrap.css %}
     {% include styles.scss %}
     {% include custom.scss %}
   {% endcapture %}
@@ -44,6 +45,15 @@
         "trackPageview": {
           "on": "visible",
           "request": "pageview"
+        },
+        "trackClickOnResume" : {
+          "on": "click",
+          "selector": "#resume-download-button",
+          "request": "event",
+          "vars": {
+            "eventCategory": "ui-components",
+            "eventAction": "resume-download-click"
+          }
         }
       }
     }
