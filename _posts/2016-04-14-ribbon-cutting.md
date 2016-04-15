@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Ribbon Cutting (under construction)
+title: Ribbon Cutting
 ---
 
-Thanks for stopping by! I'm excited to share my Metis NYC Data Science Bootcamp journey to becoming a data scientist. In this "Ribbon Cutting" post, I'll give you some background on myself, explain what Data Science is, tell you about my motivation for doing the Bootcamp, and explain some of details of the Bootcamp. Going forward, I'm planning to write a new post every few weeks.
+Thanks for stopping by! I'm excited to share my Metis NYC Data Science Bootcamp journey to becoming a data scientist. In this "Ribbon Cutting" post, I'll give you some background on myself, explain what Data Science is, <!-- tell you about my motivation for doing the Bootcamp, --> and explain some of details of the Bootcamp. Going forward, I'm planning to write a new post every few weeks.
 
 Along the journey, I'll fill you in on...
 
@@ -25,15 +25,15 @@ Since graduating UVA, I spent the last 6+ years as a technology consultant for D
 
 I also enjoy sports / exercise, travel, cooking/eating, and most importantly, learning new things!
 
-[Check out my resume](http://maxmelnick.com/about){:target="_blank"} for more information about me.
+[Check out the about page](/about) for more information about me.
 
 **What is Data Science?**
 
 The simplest way I can explain Data Science is that it's the practice of extracting valuable insights from data using a combination of math, computer science, and business domain knowledge, as shown in the following venn diagram.
 
-<div class="center-img"><amp-img width="414" height="428" src="http://static1.squarespace.com/static/54022945e4b02005531a9c9e/t/54fc82ffe4b0c724169fe392/1425834751943/?format=1500w"></amp-img></div>
+<div class="center-img"><amp-img width="414" height="428" layout="responsive" src="http://static1.squarespace.com/static/54022945e4b02005531a9c9e/t/54fc82ffe4b0c724169fe392/1425834751943/?format=1500w"></amp-img></div>
 
-Data Science has been [around for a long time] (http://dataconomy.com/beginners-guide-history-data-science/), but with the [significant growth of data](http://www.forbes.com/sites/bernardmarr/2015/09/30/big-data-20-mind-boggling-facts-everyone-must-read/#6d978c9b6c1d), there's a big growth in demand for Data Scientists that can generate valuable insights from all the ["Big Data"](https://en.wikipedia.org/wiki/Big_data).
+Data Science has been [around for a long time](http://dataconomy.com/beginners-guide-history-data-science/), but with the [significant growth of data](http://www.forbes.com/sites/bernardmarr/2015/09/30/big-data-20-mind-boggling-facts-everyone-must-read/#6d978c9b6c1d), there's a big growth in demand for Data Scientists that can generate valuable insights from all the ["Big Data"](https://en.wikipedia.org/wiki/Big_data).
 
 Perhaps some real-world examples of what Data Scientists do can help you wrap your head around the subject:
 
@@ -44,7 +44,7 @@ Perhaps some real-world examples of what Data Scientists do can help you wrap yo
 - A/B Testing
 - Spam filtering
 
-**Motivation for doing the Bootcamp**
+<!-- **Motivation for doing the Bootcamp**
 
 So...why am I doing the program?
 
@@ -68,7 +68,7 @@ Still love DC
 Timing
 Have flexibility in life right now that I probably will never have again
 
-<div class="center-img"><amp-img width="400" height="400" src="http://cdn.meme.am/instances/60565932.jpg"></amp-img></div>
+<div class="center-img"><amp-img width="400" height="400" src="http://cdn.meme.am/instances/60565932.jpg"></amp-img></div> -->
 
 
 **The Program**
@@ -77,8 +77,8 @@ Have flexibility in life right now that I probably will never have again
 
 The Bootcamp started April 4th 2016, is in-person in NYC for 12 weeks, Monday through Friday, from 9 am - 6 pm and costs $14,000. Going into the Bootcamp, you are expected to have experience writing code and studying/using statistics. The application process (online application, coding challenge, and Skype interview) helps control for these prerequisites.
 
-Highlights of the curriculum include learning the Data Science toolkit, statistical methods such as regression analysis, machine learning, and data visualization with D3. The program culminates in a 3-week final project that allows you to develop a solution to a problem of your choosing. Here's the [full syllabus](http://www.thisismetis.com/documents/Data-Science-Curriculum.pdf){:target="_blank"}
+Highlights of the curriculum include learning the Data Science toolkit, statistical methods such as regression analysis, machine learning, and data visualization with D3. The program culminates in a 3-week final project that allows you to develop a solution to a problem of your choosing. Here's the [full syllabus](http://www.thisismetis.com/documents/Data-Science-Curriculum.pdf){:target="_blank"}.
 
 At the end of the program, the goal is to be "comfortable designing, implementing, and communicating the results of a data science project, including knowing the fundamentals of data visualization and having introductory exposure to modern big data tools and architecture such as the Hadoop stack."
 
-For more information about the program, check out the [Metis site](http://www.thisismetis.com/data-science){:target="_blank"}
+For more information about the program, check out the [Metis site](http://www.thisismetis.com/data-science){:target="_blank"}.
