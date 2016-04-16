@@ -1,7 +1,7 @@
 
 {
   "@context": "http://schema.org",
-  "@type": "NewsArticle",
+  "@type": "Blog",
   "mainEntityOfPage": "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}",
   "headline": "{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}",
   "datePublished": "{% if page.date %}{{ page.date | date_to_xmlschema }}{% else %}{{ site.time | date_to_xmlschema }}{% endif %}",
@@ -12,11 +12,11 @@
     "name": "{{ site.name }}"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "{{ site.title }}",
+    "@type": "Person",
+    "name": "{{ site.name }}",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ site.logo | prepend: site.baseurl | prepend: site.url }}",
+      "url": "{{ site.author_image | prepend: site.baseurl | prepend: site.url }}",
       "width": 60,
       "height": 60
     }
