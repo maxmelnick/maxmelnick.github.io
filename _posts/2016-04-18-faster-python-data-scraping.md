@@ -275,6 +275,6 @@ I ended up using the `gevent Pool` method which allowed me to scrape all 9000+ m
 
 Why didn't I use the combined `requests.Session()` and `gevent Pool` methods? Simplicity / less moving parts, especially given the combined method didn't offer much of a performance improvement.
 
-## Next Steps
+<!-- ## Next Steps
 
-Learn more about gevent package
+Learn more about gevent package -->
