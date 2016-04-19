@@ -9,12 +9,20 @@ Here are some of the keyboard shortcuts and text snippets I've shared with other
 
 Taking a few minutes to learn certain Jupyter Notebook keyboard shortcuts has helped me be a more efficient Python developer. Below are the keyboard shortcuts I've found most useful.
 
+**NOTE** these keyboard shortcuts are for Jupyter version 4.1.0 and Mac OSX. For most shortcuts below, you can replace `cmd` for `ctrl` for Windows or Linux. Or, you can use the `H` keyboard shortcut in Windows or Linux to confirm the appropriate keyboard shortcuts for those operating systems.
+
+#### Practice Jupyter Notebook
+
+I created [this Jupyter Notebook](https://github.com/maxmelnick/jupyter_keyboard_shortcuts_snippets/blob/master/Jupyter%20Keyboard%20Shortcuts%20Practice.ipynb) on my Github repo that you can download and use to practice these keyboard shortcuts.
+
+#### Command mode vs. Edit mode
+
 But first...something key to be aware of: Jupyter Notebooks have two different keyboard input modes:
 
 1. **Command mode** - binds the keyboard to notebook level actions. Indicated by a grey cell border with a blue left margin.
 2. **Edit mode** - when you're typing in a cell. Indicated by a green cell border
 
-**NOTE** these keyboard shortcuts are for Jupyter version 4.1.0 and Mac OSX. For most shortcuts below, you can replace `cmd` for `ctrl` for Windows or Linux. Or, you can use the `H` keyboard shortcut in Windows or Linux to confirm the appropriate keyboard shortcuts for those operating systems.
+
 
 #### Command Mode
 
@@ -32,12 +40,6 @@ But first...something key to be aware of: Jupyter Notebooks have two different k
 - `Y` change cell to `code` mode
 - `M` change cell to `markdown` mode (good for documentation)
 
-<!-- |--
-| Command | Description
-|-:|:-
-cmd + shift + p | open the command palette
-`A` | insert cell above
-|=== -->
 
 #### Edit Mode
 
@@ -123,7 +125,3 @@ def ():
     '''
 ~~~
 
-
-
-<!-- Other ideas:
-- python/ipython tips and tricks (textexpander for imports, tab-shift inside function parameters, cmd+click for multi-edit, tab to autocomplete, cmd+/ to comment, cmd+alt for column select, vars() to print object variables) -->
