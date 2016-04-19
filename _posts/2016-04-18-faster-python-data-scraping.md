@@ -5,7 +5,7 @@ title: Faster Python Data Scraping with gevent.pool
 
 In my second project at Metis, I wanted to develop a linear regression model to predict the number of Academy Award nominations for a movie. In order to collect the data to develop my model, I had to scrape a lot of movie data from [BoxOfficeMojo.com](http://www.boxofficemojo.com/). One of the major issues with collecting the data was how slow it was to scrape the data and transform it to a format that I could use to develop the model. After doing some high-level performance profiling of my code using [`cProfile`](http://stackoverflow.com/questions/582336/how-can-you-profile-a-python-script), I discovered the major bottleneck was the http request for each movie (using the python `requests` package).
 
-To quantify how slow it was, using my initial code (the "Base" case in the analysis below), it took ~0.3 seconds per movie for each http request. That might not sound like much, but to collect the data for the 9000+ movies from 2000-2015 on [BoxOfficeMojo.com](http://www.boxofficemojo.com/), it would take a whopping 45+ minutes!
+To quantify how slow it was, using my initial code (the "Base" case in the analysis below), it took ~0.1 seconds per movie for each http request. That might not sound like much, but to collect the data for the 9000+ movies from 2000-2015 on [BoxOfficeMojo.com](http://www.boxofficemojo.com/), it would take 15+ minutes! That's a long time, especially as we're constantly iterating on the data we're collecting as we develop the model.
 
 Therefore, I set out to devleop a way to improve the performance so I could scrape movie data quicker. In the remainder of this post, I'll take you through a comparison of the performance of the different methods I tried, as well as the fastest method I settled on using. Here are the different methods I'll be comparing:
 
@@ -42,11 +42,11 @@ import numpy as np
 from pandas import DataFrame
 ~~~
 
-To keep things simple, we'll make all our http requests to http://espn.go.com/. Hopefully ESPN doesn't mind us making so many requests to their servers!
+To keep things simple, we'll make all our http requests to http://www.boxofficemojo.com. Hopefully they don't mind us making so many requests to their servers!
 
 
 ~~~python
-url = 'http://espn.go.com/'
+url = 'http://www.boxofficemojo.com/'
 ~~~
 
 Let's also create an empty list, `performance_results`, to track the performance of each function
@@ -66,7 +66,7 @@ def simulateHttpRequests(my_func, url, method_name):
     a dictionary with information about the function and it's performance
     '''
     times = []
-    for N in np.arange(100, 901, 200):
+    for N in np.arange(200, 1001, 200):
         secs = my_func(url, N)[1]
         times.append({'method': method_name,'N': N, 'seconds': secs})
     return times
@@ -82,9 +82,8 @@ def plotPerformance(performance_results):
     g = sns.factorplot(x='N', y='seconds', hue='method',
                    data=df, size=7, ci=None)
 
-    g.set_axis_labels('N (# calls to requests)',
-        'Time to Complete (seconds)')
-    plt.title('Performance of different url request methods vs. number of requests')
+    g.set_axis_labels('N (# http requests)', 'Total Time to Complete (seconds)')
+    plt.title('Performance of different http request methods vs. number of http requests')
 ~~~
 
 Next, we define a function `timefunc` we'll use to measure the time (in seconds) each of our functions takes to complete.
@@ -126,11 +125,11 @@ def makeRequestsBase(url, N):
 performance_results += simulateHttpRequests(makeRequestsBase, url, 'Base')
 ~~~
 
-    makeRequestsBase took 34.261341095 seconds
-    makeRequestsBase took 101.637778044 seconds
-    makeRequestsBase took 155.655081987 seconds
-    makeRequestsBase took 220.947253942 seconds
-    makeRequestsBase took 318.538731098 seconds
+    makeRequestsBase took 22.2858679295 seconds
+    makeRequestsBase took 56.5521509647 seconds
+    makeRequestsBase took 54.9886300564 seconds
+    makeRequestsBase took 91.8658950329 seconds
+    makeRequestsBase took 109.037662029 seconds
 
 
 
@@ -139,7 +138,8 @@ plotPerformance(performance_results)
 ~~~
 
 
-<amp-img width="552" height="502" layout="responsive" src="/assets/images/http-optimization/base.png"></amp-img>
+<amp-img width="424" height="386" layout="responsive" src="/assets/images/http-optimization/base.png"></amp-img>
+
 
 As you can see, the time to complete all http requests directly increases with an increase in `N` http requests. Translation: Need to make a lot of separate `requests.get()` calls? You're going to have to wait a while. Let's see if we can do better...
 
@@ -165,11 +165,11 @@ def makeRequestsWithSession(url, N):
 performance_results += simulateHttpRequests(makeRequestsWithSession, url, 'Sessions')
 ~~~
 
-    makeRequestsWithSession took 11.7829890251 seconds
-    makeRequestsWithSession took 43.0925910473 seconds
-    makeRequestsWithSession took 85.0919430256 seconds
-    makeRequestsWithSession took 88.1241760254 seconds
-    makeRequestsWithSession took 119.023229122 seconds
+    makeRequestsWithSession took 15.066172123 seconds
+    makeRequestsWithSession took 25.9786450863 seconds
+    makeRequestsWithSession took 48.7462890148 seconds
+    makeRequestsWithSession took 60.7137110233 seconds
+    makeRequestsWithSession took 74.8754990101 seconds
 
 
 
@@ -178,10 +178,10 @@ plotPerformance(performance_results)
 ~~~
 
 
-<amp-img width="568" height="502" layout="responsive" src="/assets/images/http-optimization/base_v_session.png"></amp-img>
+<amp-img width="437" height="386" layout="responsive" src="/assets/images/http-optimization/base_v_session.png"></amp-img>
 
 
-Based on the results, using `requests.Sessions()` on repeated http requests improves the performance significantly. For example, using `Sessions` takes ~40% as much time as using repeated `requests.get()` (~125 seconds vs. ~325 seconds).
+Based on the results, using `requests.Sessions()` on repeated http requests improves the performance significantly. For example, using `Sessions` takes ~60% as much time as using repeated `requests.get()` (~70 seconds vs. ~110 seconds).
 
 ## Using Pooling with `gevent.pool`
 
@@ -208,12 +208,11 @@ def makeRequestsWithPooling(url, N):
 performance_results += simulateHttpRequests(makeRequestsWithPooling, url, 'Pooling')
 ~~~
 
-
-    makeRequestsWithPooling took 5.13833785057 seconds
-    makeRequestsWithPooling took 14.8546040058 seconds
-    makeRequestsWithPooling took 27.5836908817 seconds
-    makeRequestsWithPooling took 42.0458250046 seconds
-    makeRequestsWithPooling took 48.0854520798 seconds
+    makeRequestsWithPooling took 2.18829607964 seconds
+    makeRequestsWithPooling took 3.18417310715 seconds
+    makeRequestsWithPooling took 6.19790005684 seconds
+    makeRequestsWithPooling took 6.60030603409 seconds
+    makeRequestsWithPooling took 7.90286302567 seconds
 
 
 
@@ -222,7 +221,7 @@ plotPerformance(performance_results)
 ~~~
 
 
-<amp-img width="568" height="502" layout="responsive" src="/assets/images/http-optimization/base_v_session_v_pooling.png"></amp-img>
+<amp-img width="436" height="386" layout="responsive" src="/assets/images/http-optimization/base_v_session_v_pooling.png"></amp-img>
 
 
 Now we're talking! Using `gevent.pool` seems to significantly improve the speed with which we can make repeated http requests, without much additional cost in time as `N` increases.
@@ -251,11 +250,11 @@ def makeRequestsWithSessionAndPooling(url, N):
 performance_results += simulateHttpRequests(makeRequestsWithSessionAndPooling, url, 'Sessions and Pooling')
 ~~~
 
-    makeRequestsWithSessionAndPooling took 9.64339089394 seconds
-    makeRequestsWithSessionAndPooling took 11.2737030983 seconds
-    makeRequestsWithSessionAndPooling took 26.1544210911 seconds
-    makeRequestsWithSessionAndPooling took 44.1734030247 seconds
-    makeRequestsWithSessionAndPooling took 40.9915108681 seconds
+    makeRequestsWithSessionAndPooling took 1.01481890678 seconds
+    makeRequestsWithSessionAndPooling took 1.43802595139 seconds
+    makeRequestsWithSessionAndPooling took 2.82900905609 seconds
+    makeRequestsWithSessionAndPooling took 3.96559691429 seconds
+    makeRequestsWithSessionAndPooling took 4.88879513741 seconds
 
 
 
@@ -264,14 +263,14 @@ plotPerformance(performance_results)
 ~~~
 
 
-<amp-img width="623" height="502" layout="responsive" src="/assets/images/http-optimization/compare_all.png"></amp-img>
+<amp-img width="479" height="386" layout="responsive" src="/assets/images/http-optimization/compare_all.png"></amp-img>
 
 
 Based on the simulated data, combining `requests.Session()` and `gevent.pool` doesn't improve much on simply `gevent.pool`.
 
 ## Conclusion
 
-I ended up using the `gevent.pool` method which allowed me to scrape all 9000+ movies from [BoxOfficeMojo.com](http://www.boxofficemojo.com/) from 2000-2015 in ~10 minutes! A big improvement in the 45+ minutes it would have taken me to scrape the same amount of data with the "Base case" using repeated `requests.get()` calls.
+I ended up using the `gevent.pool` method which allowed me to scrape all 9000+ movies from [BoxOfficeMojo.com](http://www.boxofficemojo.com/) from 2000-2015 in ~2 minutes! A big improvement in the 15+ minutes it would have taken me to scrape the same amount of data with the "Base case" using repeated `requests.get()` calls.
 
 Why didn't I use the combined `requests.Session()` and `gevent.pool` methods? Simplicity / less moving parts, especially given the combined method didn't offer much of a performance improvement.
 
@@ -280,3 +279,8 @@ Why didn't I use the combined `requests.Session()` and `gevent.pool` methods? Si
 This was my first experience using the [gvent](http://www.gevent.org/gevent.pool.html) package so I'd like to experiment with it in more detail and see what similar options are available. For example, I'd like to experiment to find the optimal size of the `gevent.pool`. In this post I chose a pool size of 25 based off some quick experimentation of using different values. I noticed above a value of 25, the performance increase was barely noticeable, but I'd like to explore in more detail why that might be.
 
 Anyways, until next time and happy scraping!
+
+
+## Source
+
+You can check out [this](https://github.com/maxmelnick/movie_scraping/blob/master/http-request-optimization.ipynb) Jupyter Notebook on my Github repository to see the full source for this post.
