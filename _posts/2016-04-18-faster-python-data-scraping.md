@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Faster Python Data Scraping
+title: Faster Python Data Scraping with gevent.pool
 ---
 
 In my second project at Metis, I wanted to develop a linear regression model to predict the number of Academy Award nominations for a movie. In order to collect the data to develop my model, I had to scrape a lot of movie data from [BoxOfficeMojo.com](http://www.boxofficemojo.com/). One of the major issues with collecting the data was how slow it was to scrape the data and transform it to a format that I could use to develop the model. After doing some high-level performance profiling of my code using [`cProfile`](http://stackoverflow.com/questions/582336/how-can-you-profile-a-python-script), I discovered the major bottleneck was the http request for each movie (using the python `requests` package).
@@ -11,8 +11,8 @@ Therefore, I set out to devleop a way to improve the performance so I could scra
 
 1. **Base Case** making `N` repeated HTTP requests with `requests`
 2. **HTTP Sessions** (`requests.Session()`) making `N` repeated HTTP requests with the same HTTP `Session`
-3. **Pooling HTTP Requests** (`gevent Pool`) using pooling to make `N` repeated HTTP requests **\*\*my final solution**
-4. **Sessions and Pooling** (`requests.Session()` and `gevent Pool`) combining methods (2) and (3)
+3. **Pooling HTTP Requests** ([`gevent.pool`](http://www.gevent.org/gevent.pool.html)) using pooling to make `N` repeated HTTP requests **\*\*my final solution**
+4. **Sessions and Pooling** (`requests.Session()` and `gevent.pool`) combining methods (2) and (3)
 
 Note: to make this code and analysis easier to follow, I'll be making all http requests to the same url and won't be performing any of the transformations that I had to do to the movie data.
 
@@ -183,11 +183,11 @@ plotPerformance(performance_results)
 
 Based on the results, using `requests.Sessions()` on repeated http requests improves the performance significantly. For example, using `Sessions` takes ~40% as much time as using repeated `requests.get()` (~125 seconds vs. ~325 seconds).
 
-## Using Pooling with `gevent Pool`
+## Using Pooling with `gevent.pool`
 
 It looks like using `requests.Session()` to make http requests is better than `makeRequestsBase`, but can we do even better?
 
-In our next function, `makeRequestsWithPooling`, we make the same `requests.get` calls, except this time we wrap each of the `N` calls in a `gevent Pool`.
+In our next function, `makeRequestsWithPooling`, we make the same `requests.get` calls, except this time we wrap each of the `N` calls in a `gevent.pool`.
 
 
 ~~~python
@@ -225,11 +225,11 @@ plotPerformance(performance_results)
 <amp-img width="568" height="502" layout="responsive" src="/assets/images/http-optimization/base_v_session_v_pooling.png"></amp-img>
 
 
-Now we're talking! Using `gevent Pool` seems to significantly improve the speed with which we can make repeated http requests, without much additional cost in time as `N` increases.
+Now we're talking! Using `gevent.pool` seems to significantly improve the speed with which we can make repeated http requests, without much additional cost in time as `N` increases.
 
 ## Using Sessions and Pooling
 
-Can we do even better if we combine the `requests.Session()` and `gevent Pool` methods?
+Can we do even better if we combine the `requests.Session()` and `gevent.pool` methods?
 
 
 ~~~python
@@ -267,14 +267,16 @@ plotPerformance(performance_results)
 <amp-img width="623" height="502" layout="responsive" src="/assets/images/http-optimization/compare_all.png"></amp-img>
 
 
-Based on the simulated data, combining `requests.Session()` and `gevent Pool` doesn't improve much on simply `gevent Pool`.
+Based on the simulated data, combining `requests.Session()` and `gevent.pool` doesn't improve much on simply `gevent.pool`.
 
 ## Conclusion
 
-I ended up using the `gevent Pool` method which allowed me to scrape all 9000+ movies from [BoxOfficeMojo.com](http://www.boxofficemojo.com/) from 2000-2015 in ~10 minutes! A big improvement in the 45+ minutes it would have taken me to scrape the same amount of data with the "Base case" using repeated `requests.get()` calls.
+I ended up using the `gevent.pool` method which allowed me to scrape all 9000+ movies from [BoxOfficeMojo.com](http://www.boxofficemojo.com/) from 2000-2015 in ~10 minutes! A big improvement in the 45+ minutes it would have taken me to scrape the same amount of data with the "Base case" using repeated `requests.get()` calls.
 
-Why didn't I use the combined `requests.Session()` and `gevent Pool` methods? Simplicity / less moving parts, especially given the combined method didn't offer much of a performance improvement.
+Why didn't I use the combined `requests.Session()` and `gevent.pool` methods? Simplicity / less moving parts, especially given the combined method didn't offer much of a performance improvement.
 
-<!-- ## Next Steps
+## Potential Next Steps
 
-Learn more about gevent package -->
+This was my first experience using the [gvent](http://www.gevent.org/gevent.pool.html) package so I'd like to experiment with it in more detail and see what similar options are available. For example, I'd like to experiment to find the optimal size of the `gevent.pool`. In this post I chose a pool size of 25 based off some quick experimentation of using different values. I noticed above a value of 25, the performance increase was barely noticeable, but I'd like to explore in more detail why that might be.
+
+Anyways, until next time and happy scraping!
