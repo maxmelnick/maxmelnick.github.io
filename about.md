@@ -52,7 +52,7 @@ Responsible for Section 508 accessibility testing
 
 ### TECHNICAL
 
-JIRA, Node, Angular, Bootstrap CSS, Grunt, Elasticsearch, AWS, Sublime Text, Oracle 11g database, Tableau, SQL, JavaScript, CSS/SASS, HTML, Python
+JIRA, Node, Angular, Bootstrap CSS, Grunt, Elasticsearch, AWS, Sublime Text, Oracle 11g database, Tableau, SQL, JavaScript, CSS/SASS, HTML, Python, Git
 
 ### FUNCTIONAL
 
