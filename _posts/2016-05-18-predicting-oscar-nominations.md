@@ -3,7 +3,7 @@ layout: post
 title: Project 2 - Predicting Oscar Nominations
 ---
 
-In project 1, we focused on learning the fundamental components of the Data Science "toolkit" by analyzing NYC MTA Subway data. In project 2, code-named Project Luther, we built on those fundamentals and learned new concepts and analysis techniques such as web data scraping and linear regression to predict something about the movie industry. I brainstormed a lot of different ideas, but ended up settling on trying to predict the number of Oscar nominations for a movie.
+In project 1, we focused on learning the fundamental components of the Data Science "toolkit" by analyzing NYC MTA Subway data. In project 2, code-named Project Luther, we built on those fundamentals and learned new concepts and analysis techniques such as web data scraping and linear regression to predict something about the movie industry. I decided to focus on trying to predict the number of Oscar nominations for a movie.
 
 <amp-img width="500" height="213" layout="responsive" src="https://media.giphy.com/media/6mnlYDQ4VdbUs/giphy.gif"></amp-img>
 
@@ -69,9 +69,42 @@ In exploring my data, I realized that there were certain movies that were duplic
 
 ##### Feature engineering based on prior data
 
-Engineering data for a movie director's total previous Oscar nominations was not an easy task. I couldn't simply create a new table that had director and a sum of all their Oscar Nominations, and then join that table back to the main movie data set. The problem is that the number of previous Oscar nominations by a director changes over time. As an example, Ridley Scott directed major movies that received Oscar nominations such as Gladitor in 2001, American Gangster in 2007, and The Martian in 2015. However, the total number of previous Oscar nominations for Ridley Scott movies was different for each one since the total is a cumulative sum.
+Engineering data for a movie director's total previous Oscar nominations was not an easy task. I couldn't simply create a new table that had director and a sum of all their Oscar Nominations, and then join that table back to the main movie data set. The problem is that the number of previous Oscar nominations by a director changes over time. As an example, Ridley Scott directed major movies that received Oscar nominations such as Gladiator in 2001, American Gangster in 2007, and The Martian in 2015. However, the total number of previous Oscar nominations for Ridley Scott movies was different for each movie since the total is a running cumulative sum of the movies released beforehand.
 
-To address the issue, I used a self-join in Pandas. To see the exact code, check out the `addPrevDirectorNoms` function in my project source on [github](https://github.com/maxmelnick/movie_scraping).
+To address the issue, I used Pandas to first do a self-join using a `merge()` and then `groupby()` with a `sum()`. Here's the exact code I used:
+
+~~~python
+def addPrevDirectorNoms(df):
+    '''
+    Add total previous oscar nominations for the director's movies that occurred before a
+    movie was released
+    '''
+    # create a new dataframe with only the director, noms (nominations), and release_date
+    # also drop any movies without any noms
+    director_prev_noms_df = df[['director','noms', 'release_date']].dropna(subset=['noms'])
+    # convert noms to an int
+    director_prev_noms_df['noms'] = director_prev_noms_df['noms'].astype('int')
+    # self-join on director
+    director_prev_noms_df = pd.merge(director_prev_noms_df,\
+                                     director_prev_noms_df, on='director')
+    # remove any nominations that happened after a particular momvie was released
+    director_prev_noms_df = director_prev_noms_df[director_prev_noms_df['release_date_x']\
+                                                  > director_prev_noms_df['release_date_y']]
+    # get a sum of all the previous nominations for the director's movies
+    director_prev_noms_df = director_prev_noms_df.groupby(['director', 'noms_x',\
+                                                           'release_date_x'], as_index=False).sum()
+    # merge the previous nomination data back to the original dataframe
+    prev_noms = df.merge(director_prev_noms_df, left_on=['director', 'release_date']\
+                         , right_on=['director', 'release_date_x'], how='left')
+    # when a movie director has never had a movie that had any previous nominations,
+    # set their previous nominations to 0
+    prev_noms['prev_noms'] = prev_noms['noms_y'].fillna(0).astype(int)
+    # drop some of the duplicated columns that were created as part of the merges
+    prev_noms = prev_noms.drop(['noms_y','noms_x'], 1)
+
+    # return the new dataframe that has the previous nominations added as a column
+    return prev_noms
+~~~
 
 <amp-img width="359" height="151" layout="responsive" src="http://www.sharegif.com/wp-content/uploads/2013/11/Gladiator-quotes-1.gif"></amp-img>
 
@@ -87,7 +120,7 @@ To address the issue, I used a self-join in Pandas. To see the exact code, check
 Here are some quick thoughts on how I may be able to improve the model in the future:
 
 - Experiment with models other than linear regression (e.g., reformulate the problem as a classification problem and use different classification algorithms on the data)
-- Focus analysis on subset of Oscar nomination categories to avoid differences in categories (e.g., Best Picture vs. Best Score)
+- Focus analysis on a subset of Oscar nomination categories to avoid differences in categories (e.g., Best Picture vs. Best Score)
 - Add additional historical Oscar nominations/wins for full cast (not just director)
 - Research techniques from other Oscar prediction analyses
 
