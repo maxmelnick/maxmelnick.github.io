@@ -52,7 +52,7 @@ Here are my major takeaways from project 2.
 
 Overall, being able to collect data quicker allowed me to experiment with more data sets and models. Here are some techniques I used to help speed up my analysis.
 
-+ **Using event pooling to speed up scraping -** Check out my [previous article](2016-04-18-faster-python-data-scraping) where I described the different methods I used to speed up data scraping and the summary of associated performance improvements.
++ **Using event pooling to speed up scraping -** Check out my [previous article]({% post_url 2016-04-18-faster-python-data-scraping %}) where I described the different methods I used to speed up data scraping and the summary of associated performance improvements.
 + **Pickling to make future start-up time faster** Check out [this post](http://ianlondon.github.io/blog/pickling-basics/) by my classmate, Ian London on how to use Pickling in Python to save data that required a time-consuming process to collect (scraping the movie data in my case).
 + **Code in small chunks -** functions on large datasets can be very time-intensive. To save time in coding these functions, I like to perfect the functions on small, more manageable subsets of the overall dataset. For example, to develop the function to scrape data from Box Office Mojo, I first developed the code to collect data for a single movie before scaling the function up to collect data from an entire year, and then scaling it up again to scrape movie data for multiple years.
 
