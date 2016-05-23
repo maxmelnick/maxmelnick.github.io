@@ -34,7 +34,7 @@ After iterating over many different models, I settled on the following model for
 
 ### This Oscar nomination prediction business isn't as easy as it sounds
 
-<amp-img width="498" height="260" layout="responsive" src="https://dn3pm25xmtlyu.cloudfront.net/photos/thumb/841769934.gif?1393806755&Expires=1463592541&Signature=LtmxFtRJyWT49V0N~5m2b-1tsmJTNq~MTTSeRj3pgWvMpZYG0gQS4tzI~-tN31WrWhX4NNf0EgM5sgRHK6sg8vVvViOqN9AEmswHlTx1wXYQS7VuCsSBQHUIBlUmQAenhwRUdO7qh0RXoP9L-b6Qm2EHG6O~N3H7kb0jj03l9Dw_&Key-Pair-Id=APKAIYVGSUJFNRFZBBTA"></amp-img>
+<amp-img width="287" height="150" layout="responsive" src="http://popcrush.com/files/2014/03/JLawFall.gif"></amp-img>
 
 The final linear regression model I developed was not a robust basis for prediction given the `R-squared` value of 0.426. However, there are a few conclusions we can draw from the model results:
 
