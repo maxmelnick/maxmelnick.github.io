@@ -98,7 +98,7 @@ Then, open a browser to `http://[YOUR_DOCKER_MACHINE_IP_ADDRESS]:8888`, filling 
 
 ## Open Jupyter in your browser
 
-Next, open a browser to `http://[YOUR_IP_ADDRESS]:8888`, filling in [YOUR_IP_ADDRESS] as appropriate. You should see the Jupyter home page.
+Next, open a browser to `http://[YOUR_DOCKER_MACHINE_IP_ADDRESS]:8888`, filling in [YOUR_IP_ADDRESS] as appropriate. You should see the Jupyter home page.
 
 ## Test using Spark in Jupyter
 
