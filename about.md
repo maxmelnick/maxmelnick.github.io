@@ -24,7 +24,7 @@ I also enjoy sports / exercise, travel, cooking/eating, reading, listening to po
 - Led SAML single-sign-on implementation for web application
 - Led migration from physical data center infrastructure to private cloud data center infrastructure which saved client over 70% of yearly hosting costs and increased flexibility and scalability of the application
 - Developed strategy for a unified approach to technology software use across the client's organization
-Responsible for Section 508 accessibility testing
+- Responsible for Section 508 accessibility testing
 - Experience leading and supporting large firm initiatives for business development, recruiting, and culture development
 
 ### UNDER ARMOUR
