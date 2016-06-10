@@ -18,7 +18,7 @@ First you'll need to install Docker. Browse to the [Docker website](https://www.
 >       # Example adding `ubuntu` user to `docker` group
 >       $ sudo usermod -aG docker ubuntu
 >
-> Make sure to log out from your Linux user and log back in again before trying `docker` without `sudo`
+> Make sure to log out from your Linux user and log back in again before trying `docker` without `sudo`.
 
 # Run the Docker container
 
