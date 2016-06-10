@@ -13,41 +13,17 @@ First you'll need to install Docker. Browse to the [Docker website](https://www.
 
 <amp-img width="650" height="327" layout="responsive" src="/assets/images/docker-spark/docker_get_started.png"></amp-img>
 
-You can validate you installed Docker successfully by running a Docker container with the `hello-world` Docker image as follows.
-
-~~~
-$ docker run hello-world
-Unable to find image 'hello-world:latest' locally
-latest: Pulling from library/hello-world
-535020c3e8ad: Pull complete
-af340544ed62: Pull complete
-Digest: sha256:a68868bfe696c00866942e8f5ca39e3e31b79c1e50feaee4ce5e28df2f051d5c
-Status: Downloaded newer image for hello-world:latest
-
-Hello from Docker.
-This message shows that your installation appears to be working correctly.
-
-To generate this message, Docker took the following steps:
-1. The Docker Engine CLI client contacted the Docker Engine daemon.
-2. The Docker Engine daemon pulled the "hello-world" image from the Docker Hub.
-3. The Docker Engine daemon created a new container from that image which runs the
-   executable that produces the output you are currently reading.
-4. The Docker Engine daemon streamed that output to the Docker Engine CLI client, which sent it
-   to your terminal.
-
-To try something more ambitious, you can run an Ubuntu container with:
-$ docker run -it ubuntu bash
-
-Share images, automate workflows, and more with a free Docker Hub account:
-https://hub.docker.com
-
-For more examples and ideas, visit:
-https://docs.docker.com/userguide/
-~~~
+> **Note:** On Linux, you will get a `Can't connect to docker daemon.` error if you don't use `sudo` before any `docker` commands. So you don't have to `sudo` each time you run a `docker` command, I highly recommend you add your user (`ubuntu` in the example below) to the `docker` user group. See ["Create a Docker group"](https://docs.docker.com/engine/installation/linux/ubuntulinux/#create-a-docker-group) for more info.
+>
+>       # Example adding `ubuntu` user to `docker` group
+>       $ sudo usermod -aG docker ubuntu
+>
+> Make sure to log out from your Linux user and log back in again before trying `docker` without `sudo`
 
 # Run the Docker container
 
 We'll use the [jupyter/pyspark-notebook][1] Docker image. The great thing about this image is it includes:
+
 - Apache Spark
 - Jupyter Notebook
 - Miniconda with Python 2.7.x and 3.x environments
@@ -69,6 +45,7 @@ To run the container, all you need to do is execute the following:
 
     $ docker run -d -p 8888:8888 -v $PWD:/home/jovyan/work --name spark jupyter/pyspark-notebook
 
+
 What's going on when we run that command?
 
 The `-d` runs the container in the background.
@@ -89,25 +66,21 @@ The [jupyter/pyspark-notebook][1] image automatically starts a Jupyter Notebook 
 
 ### Mac or Windows
 
-> **Note:** As of this writing (June 4, 2016), the following command is the proper way to get the Docker Machine IP address on Mac or Windows. However, Docker is slated to release a [native Docker version for Mac or Windows](https://blog.docker.com/2016/03/docker-for-mac-windows-beta/) in the near future. In the native version, the `docker-machine` command will not work and you will most likely have to use the `docker inspect` command per the Linux section below.
+> **Note:** As of this writing (June 4, 2016), the following command is the proper way to get the Docker Machine IP address on Mac or Windows. However, Docker is slated to release a [native Docker version for Mac or Windows](https://blog.docker.com/2016/03/docker-for-mac-windows-beta/) in the near future. In the native version, the `docker-machine` command will not work and you will most likely have to use the same command as the Linux section below.
 
-    $ docker-machine ip
-    192.168.99.100 # This was mine, but won't necessarily be the same IP for you
+    $ open "http://$(docker-machine ip):8888"
 
-> Alternatively from the command above, you may be able to streamline the process with the following command that automatically gets the proper IP and opens a new browser window to the correct address all in one step.
+> If the command above doesn't work, you may have to use the following command:
 >
->   `$ open "http://$(docker-machine ip):8888"`
+>       $ docker-machine ip
+>       192.168.99.100
+>       # This was mine, but won't necessarily be the same IP for you
+>
+> Next, open a browser to `http://[YOUR_DOCKER_MACHINE_IP_ADDRESS]:8888`, filling in `[YOUR_IP_ADDRESS]` as appropriate. You will see the Jupyter home page.
 
 ### Linux
 
-
-    $ docker inspect --format '{% raw %}{{ .NetworkSettings.IPAddress }}{% endraw %}' spark
-    172.17.0.2 # This is an example output, but won't necessarily be the same IP for you
-
-
-## Open Jupyter in your browser
-
-Next, open a browser to `http://[YOUR_DOCKER_MACHINE_IP_ADDRESS]:8888`, filling in [YOUR_IP_ADDRESS] as appropriate. You should see the Jupyter home page.
+Open a browser to `http://localhost:8888` and you will see the Jupyter home page.
 
 ## Test using Spark in Jupyter
 
@@ -132,6 +105,24 @@ rdd.takeSample(False, 5)
     [841, 378, 942, 629, 399] # Output
 
 That's it! Now you can start learning and experimenting with Spark!
+
+## Starting and stopping the Docker container
+
+> **Note:** these commands assume you used `spark` as the `--name` when you executed the `docker run` command above. If you used a different `--name`, substitue that for `spark` in the commands below.
+
+If you want to stop the Docker container from running in the background:
+
+    $ docker stop spark
+
+To start the Docker container again:
+
+    $ docker start spark
+
+To remove the Docker container altogether:
+
+    $ docker rm spark
+
+See the [Docker docs](https://docs.docker.com/engine/reference/commandline/) for more information on these and more Docker commands.
 
 # An alternative approach on Mac
 
