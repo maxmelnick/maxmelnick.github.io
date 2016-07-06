@@ -79,6 +79,8 @@ Constantly importing the same packages and/or forget what that package you alway
 `;imp` becomes:
 
 ~~~python
+from __future__ import division
+
 import numpy as np
 
 import pandas as pd
@@ -93,8 +95,6 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set_style('whitegrid')
-
-from __future__ import division
 
 %matplotlib inline
 
