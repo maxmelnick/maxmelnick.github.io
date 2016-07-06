@@ -51,6 +51,7 @@ So...why am I doing the program?
 **Passion** One thing I learned from my experience working at Deloitte for the last 6+ years is that I can most easily get into "The Zone" and lose myself when I'm making things such as web applications and data visualization projects (along with all the Data Science work that's required to develop and communicate a message in a data visualization). As a result, I see this Bootcamp as an opportunity to double-down and build my skills in an area that combines both the software development
 
 **Demand for Data Scientists**
+- http://bits.blogs.nytimes.com/2015/04/28/less-noise-but-more-money-in-data-science/?_r=0
 
 
 **Environment**
@@ -75,7 +76,7 @@ Have flexibility in life right now that I probably will never have again
 
 <amp-img width="399" height="201" layout="responsive" src="http://i.imgur.com/G5gf6lo.gif?noredirect"></amp-img>
 
-The Bootcamp started April 4th 2016, is in-person in NYC for 12 weeks, Monday through Friday, from 9 am - 6 pm and costs $14,000. Going into the Bootcamp, you are expected to have experience writing code and studying/using statistics. The application process (online application, coding challenge, and Skype interview) helps control for these prerequisites.
+The Bootcamp started April 4th 2016, is in-person in NYC for 12 weeks, Monday through Friday, from 9 am - 6 pm and costs $14,000 (**UPDATE:** The cost increased to $15,500 on June 20, 2016). Going into the Bootcamp, you are expected to have experience writing code and studying/using statistics. The application process (online application, coding challenge, and Skype interview) helps control for these prerequisites.
 
 Highlights of the curriculum include learning the Data Science toolkit, statistical methods such as regression analysis, machine learning, and data visualization with D3. The program culminates in a 3-week final project that allows you to develop a solution to a problem of your choosing. Here's the [full syllabus](http://www.thisismetis.com/documents/Data-Science-Curriculum.pdf){:target="_blank"}.
 
