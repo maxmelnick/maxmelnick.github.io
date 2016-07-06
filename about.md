@@ -7,7 +7,7 @@ permalink: /about/
 # OVERVIEW
 I am passionate about making a positive impact by creating technology products with my strong blend of technical and business skills. I have 6+ years of experience in the federal public service industry and consumer products industry focusing on technology product development, enterprise architecture, and business intelligence.
 
-I also enjoy sports / exercise, travel, cooking/eating, reading, listening to podcasts, and most importantly, learning new things!
+I also enjoy sports / exercise, travel, cooking/eating, reading, listening to podcasts, and learning new things!
 
 # EXPERIENCE
 
@@ -26,6 +26,19 @@ I also enjoy sports / exercise, travel, cooking/eating, reading, listening to po
 - Developed strategy for a unified approach to technology software use across the client's organization
 - Responsible for Section 508 accessibility testing
 - Experience leading and supporting large firm initiatives for business development, recruiting, and culture development
+
+### Metis
+
+*Spring 2016 \| Data Scientist*
+
+- 12-week immersive project-based data science bootcamp
+- Developed convolutional neural network in TensorFlow to identify brand logos in social media images
+- Contributed to TensorFlow project on GitHub
+- Used NLP topic modeling techniques to summarize and identify key aspects of Amazon product reviews
+- Developed logistic regression model to predict if an Amazon review will be helpful or not-helpful
+- Used NYC Subway data to recommend optimal locations to hand out event flyers in NYC
+- Developed linear regression model to predict movie Oscar nominations
+
 
 ### UNDER ARMOUR
 
@@ -48,12 +61,22 @@ I also enjoy sports / exercise, travel, cooking/eating, reading, listening to po
 
 *2005 - 2009* \| B.S. in Systems Engineering with Highest Distinction
 
-# SKILLS
+# TECHNICAL SKILLS
 
-### TECHNICAL
+### DATA SCIENCE
 
-JIRA, Node, Angular, Bootstrap CSS, Grunt, Elasticsearch, AWS, Sublime Text, Oracle 11g database, Tableau, SQL, JavaScript, CSS/SASS, HTML, Python, Git
+Machine learning, deep learning, data visualization, NLP, web scraping
 
-### FUNCTIONAL
+### PRODUCTS / FRAMEWORKS
 
-Leadership, Project Management, Communication, Agile development, Developing others, Analytical, Lean Startup, Recruiting, Business Development, Culture Development, Enterprise Architecture
+*Project Experience:* Tableau, Docker, AWS, Git, TensorFlow, JIRA, Node, Angular, Bootstrap CSS, Grunt, Elasticsearch, MySQL, Sublime Text, jQuery, Oracle 11g database, Oracle APEX, Piwik, Shibboleth, Adobe Photoshop, Informatica, ERwin
+
+*Training:* Spark, Hadoop, Mongo DB, D3, Microstrategy BI, SAP Business Objects, SAS BI
+
+### DEVELOPMENT LANGUAGES
+
+SQL, JavaScript, Python, CSS/SASS, PL/SQL, Java, HTML, VBA
+
+# BUSINESS SKILLS
+
+Leadership, Project Management, Agile development, Enterprise Architecture, Analytics, Lean Startup, business development, recruiting, culture development
