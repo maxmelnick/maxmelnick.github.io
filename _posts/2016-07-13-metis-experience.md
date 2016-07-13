@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reflecting on the Metis Experience
+title: Reflecting on my Metis Data Science Bootcamp Experience
 ---
 
 I just graduated from the Spring 2016 NYC Metis Data Science Bootcamp (DS7 cohort) so I figured it would be a great opportunity to reflect on the experience. If you're interested in learning more about Metis (i.e., you're researching, applying, or preparing to attend), this post will provide you with valuable insider information about the bootcamp, including: the people, the curriculum, what it's like attending class at the NoMad WeWork, the Metis resources and perks, my general likes / improvement recommendations for the bootcamp, and even some tips for future cohort members. I hope you enjoy reading!
