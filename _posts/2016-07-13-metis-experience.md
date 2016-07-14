@@ -37,7 +37,7 @@ That's the 10,000-foot view of what we covered in 12 weeks, but here's what a ty
 
 |---
 | Time | Activity
-| :-: | :-
+| - | -
 | 09:00 - 09:30 | Arrive at WeWork, fill-up with coffee, get situated
 | 09:30 - 10:30 | Pair programming exercise
 | 10:30 - 12:30 | Lecture
@@ -49,7 +49,7 @@ That's the 10,000-foot view of what we covered in 12 weeks, but here's what a ty
 
 I feel like I would be remiss to talk about a typical day without mentioning the main class method of communication: [Slack](https://slack.com/). The instructors and support staff mainly used Slack to communicate important announcements. We used it for more things than I can remember, but included sharing #resources, #pairprogramming, upcoming #events, and discussing #random nonsense. Overall, it was my first full-time experience using Slack. Compared to regular email, I really enjoyed the cohesiveness (e.g., easier to upload and find shared documents in one place), user-friendliness, and fun-factor (e.g., [Giphy plugin](http://giphy.com/posts/slack-adds-giphy-to-every-chatroom-wut)).
 
-What I listed above is a typical day, but the class structure was very flexible which I really appreciated. Sometimes I would go to the gym in the afternoon but come in earlier or stay later to make up the work. Not only did I do some of my best thinking during that break time at the gym, it was also nice to avoid the NYC gym crowds that hit after work :wink:.
+What I listed above is a typical day, but the class structure was very flexible which I really appreciated. Sometimes I would go to the gym in the afternoon but come in earlier or stay later to make up the work. Not only did I do some of my best thinking during that break time at the gym, it was also nice to avoid the NYC gym crowds that hit after work.
 
 One thing I was wondering before coming to Metis was what the workload is like outside of the 9 am - 6 pm class schedule. In talking to people from the prior cohort, it sounded like only a few people stayed much later than 6 pm every day. However, in our cohort there was usually a good group of people that stayed until at least 7:30 - 8 pm and sometimes even later. I know some people also came in on weekends to catch up on work. From my perspective, I did a good amount of work outside of class.
 
