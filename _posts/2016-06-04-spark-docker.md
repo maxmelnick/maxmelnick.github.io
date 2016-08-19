@@ -7,11 +7,23 @@ Are you learning or experimenting with [Apache Spark](http://spark.apache.org/)?
 
 Curious how? Let me show you!
 
+# Wait a second! What exactly is Docker?
+
+According to the [official Docker website](https://www.docker.com/what-docker):
+
+>"Docker containers wrap a piece of software in a complete filesystem that contains everything needed to run: code, runtime, system tools, system libraries – anything that can be installed on a server. This guarantees that the software will always run the same, regardless of its environment."
+
+It also helps to understand [how Docker "containers" relate (somewhat imperfectly) to shipping containers](https://www.ctl.io/developers/blog/post/docker-and-shipping-containers-a-useful-but-imperfect-analogy/).
+
+In this tutorial, we'll take advantage of Docker's ability to package _a complete filesystem that contains everything needed to run._ Specifically, _everything needed to run_ Apache Spark. You'll also be able to use this to run Apache Spark _regardless of the environment_ (i.e., operating system). That means you'll be able to generally follow the same steps on your local Linux/Mac/Windows machine as you will on a cloud virtual machine (e.g., AWS EC2 instance). Pretty neat, huh?
+
 # Install Docker
 
-First you'll need to install Docker. Browse to the [Docker website](https://www.docker.com/) and click the green "Get Started" button in the top right. At the very least, you'll want to complete the "Install Docker" section, but I recommend going through the entire "Get Started" guide if you have the time as it will allow you to better understand the Docker commands we'll be using.
+First you'll need to install Docker. Follow the instructions in the install / get started links for your particular operating system:
 
-<amp-img width="650" height="327" layout="responsive" src="/assets/images/docker-spark/docker_get_started.png"></amp-img>
+- *Mac:* https://docs.docker.com/docker-for-mac/
+- *Windows:* https://docs.docker.com/docker-for-windows/
+- *Linux:* https://docs.docker.com/engine/getstarted/
 
 > **Note:** On Linux, you will get a `Can't connect to docker daemon.` error if you don't use `sudo` before any `docker` commands. So you don't have to `sudo` each time you run a `docker` command, I highly recommend you add your user (`ubuntu` in the example below) to the `docker` user group. See ["Create a Docker group"](https://docs.docker.com/engine/installation/linux/ubuntulinux/#create-a-docker-group) for more info.
 >
@@ -34,12 +46,12 @@ Create a new folder somewhere on your computer. You'll store the Jupyter noteboo
 
     $ cd ~
     $ pwd
-    /Users/maxmelnick
+    /Users/maxmelnick/apps
 
     $ mkdir spark-docker && cd $_
 
     $ pwd
-    /Users/maxmelnick/spark-docker
+    /Users/maxmelnick/apps/spark-docker
 
 To run the container, all you need to do is execute the following:
 
@@ -62,27 +74,9 @@ For more information about the `docker run` command, check out the [Docker docs]
 
 # Test Spark in a Jupyter notebook using Pyspark
 
-The [jupyter/pyspark-notebook][1] image automatically starts a Jupyter Notebook server. In order to get the URL of the server, we need to figure out what IP address the Docker container is running on. Getting the IP is slightly different depending on what O/S you're running.
-
-### Mac or Windows
-
-> **Note:** As of this writing (June 4, 2016), the following command is the proper way to get the Docker Machine IP address on Mac or Windows. However, Docker is slated to release a [native Docker version for Mac or Windows](https://blog.docker.com/2016/03/docker-for-mac-windows-beta/) in the near future. In the native version, the `docker-machine` command will not work and you will most likely have to use the same command as the Linux section below.
-
-    $ open "http://$(docker-machine ip):8888"
-
-> If the command above doesn't work, you may have to use the following command:
->
->       $ docker-machine ip
->       192.168.99.100
->       # This was mine, but won't necessarily be the same IP for you
->
-> Next, open a browser to `http://[YOUR_DOCKER_MACHINE_IP_ADDRESS]:8888`, filling in `[YOUR_IP_ADDRESS]` as appropriate. You will see the Jupyter home page.
-
-### Linux
+The [jupyter/pyspark-notebook][1] image automatically starts a Jupyter Notebook server.
 
 Open a browser to `http://localhost:8888` and you will see the Jupyter home page.
-
-## Test using Spark in Jupyter
 
 Once you have the Jupyter home page open, create a new Jupyter notebook using either `Python 2` or `Python 3`.
 
