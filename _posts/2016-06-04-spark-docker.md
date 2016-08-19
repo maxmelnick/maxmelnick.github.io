@@ -21,9 +21,9 @@ In this tutorial, we'll take advantage of Docker's ability to package _a complet
 
 First you'll need to install Docker. Follow the instructions in the install / get started links for your particular operating system:
 
-- *Mac:* https://docs.docker.com/docker-for-mac/
-- *Windows:* https://docs.docker.com/docker-for-windows/
-- *Linux:* https://docs.docker.com/engine/getstarted/
+- *Mac:* [https://docs.docker.com/docker-for-mac/](https://docs.docker.com/docker-for-mac/)
+- *Windows:* [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)
+- *Linux:* [https://docs.docker.com/engine/getstarted/](https://docs.docker.com/engine/getstarted/)
 
 > **Note:** On Linux, you will get a `Can't connect to docker daemon.` error if you don't use `sudo` before any `docker` commands. So you don't have to `sudo` each time you run a `docker` command, I highly recommend you add your user (`ubuntu` in the example below) to the `docker` user group. See ["Create a Docker group"](https://docs.docker.com/engine/installation/linux/ubuntulinux/#create-a-docker-group) for more info.
 >
