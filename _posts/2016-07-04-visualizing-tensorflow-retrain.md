@@ -11,7 +11,7 @@ Follow the steps in [this tutorial][tutorial]. The specific section I added is "
 
 # Retraining a state-of-the-art image classification Neural Network to classify your own images in TensorFlow
 
-A major part of my final Metis project was modifying and retraining the state-of-the-art [Google Inception v3](http://arxiv.org/abs/1512.00567) Deep Convolutional Neural Network to classify images. The Google TensorFlow project has a great [tutorial][tutorial] which shows you how to quickly get started retraining the Inception v3 model to classify images of flowers and then repurpose the code for your own image classification needs.
+A major part of [my final Metis project]({% post_url 2016-08-31-final-project %}) was modifying and retraining the state-of-the-art [Google Inception v3](http://arxiv.org/abs/1512.00567) Deep Convolutional Neural Network to classify images. The Google TensorFlow project has a great [tutorial][tutorial] which shows you how to quickly get started retraining the Inception v3 model to classify images of flowers and then repurpose the code for your own image classification needs.
 
 # Challenges optimizing Inception v3 model retraining
 

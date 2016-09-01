@@ -31,6 +31,12 @@ In addition to our cohort, we had a good amount of exposure to the Metis alumni 
 
 Overall, the [Metis curriculum](http://www.thisismetis.com/documents/Data-Science-Curriculum.pdf) aims for breadth of experience, covering a wide-range of data science topics in a short amount of time. During the 12 weeks, we focused on everything from math-heavy concepts (e.g., statistics, probability, linear algrebra), to computer programming concepts (e.g., Python, JavaScript, and SQL), to your more prototypical data science-y machine learning (supervised and unsupervised; regression and classification) and Natural Language Processing. The broad exposure allowed us to better understand the fundamental components of data science as well as which components we like / dislike.
 
+Here are some of the projects I completed during the bootcamp to help you get a better sense of the tangible products that you may produce at Metis:
+- [Improving Brand Analytics with an Image Logo Detection Convolutional Neural Net in TensorFlow]({% post_url 2016-08-31-final-project %})
+- [Can we predict if an Amazon review will be helpful or not?]({% post_url 2016-06-07-amazon-review-helpfulness-classification %})
+- [Predicting Oscar Nominations]({% post_url 2016-05-18-predicting-oscar-nominations %})
+- [Using NYC Subway data to determine the best location to hand out event flyers]({% post_url 2016-05-02-mta-subway-analysis %})
+
 That's the 10,000-foot view of what we covered in 12 weeks, but here's what a typical day for our cohort looked like:
 
 ***
