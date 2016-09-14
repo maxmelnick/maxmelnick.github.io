@@ -2,6 +2,30 @@
 <html ⚡ lang="en">
   {% include head.html %}
   <body>
+  <amp-analytics type="googleanalytics" id="analytics1">
+    <script type="application/json">
+    {
+      "vars": {
+        "account": "UA-67034229-1"
+      },
+      "triggers": {
+        "trackPageview": {
+          "on": "visible",
+          "request": "pageview"
+        },
+        "trackClickOnResume" : {
+          "on": "click",
+          "selector": "#resume-download-button",
+          "request": "event",
+          "vars": {
+            "eventCategory": "ui-components",
+            "eventAction": "resume-download-click"
+          }
+        }
+      }
+    }
+    </script>
+  </amp-analytics>
     {% include header.html %}
 
     {{ content }}
