@@ -31,4 +31,3 @@ kramdown:
 
 gems:
   - jekyll-paginate
-  - jemoji

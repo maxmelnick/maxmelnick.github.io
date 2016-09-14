@@ -27,6 +27,6 @@
 	margin-bottom: 50px;
 }
 
-li>ul{
-	padding-bottom: 0px !important;
+.post .post-content li>ul, .post .post-content li>ol{
+	padding-bottom: 0px;
 }
