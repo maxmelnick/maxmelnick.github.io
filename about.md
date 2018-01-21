@@ -61,6 +61,11 @@ I also enjoy sports / exercise, travel, cooking/eating, reading, listening to po
 
 *2005 - 2009* \| B.S. in Systems Engineering with Highest Distinction
 
+# Certifications
+
+- AWS Certified Solution Architect - Associate (2018)
+- Certified Scrum Master
+
 # TECHNICAL SKILLS
 
 ### DATA SCIENCE
