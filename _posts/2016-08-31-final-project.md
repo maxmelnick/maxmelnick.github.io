@@ -146,16 +146,12 @@ However, sometimes the model was even smarter than me...
 {% include image.html width="650" height="344" src="/assets/images/final_project/file-page11.jpg" %}
 
 
-### Live app prototype!
-
-Below is a screencast of the app. The live app is accessible at [http://logo-detector.maxmelnick.com](http://logo-detector.maxmelnick.com) if you'd like to take it for a test drive.
+### App Screencast!
 
 <amp-youtube
     data-videoid="3ZyQaA58DLY"
     layout="responsive"
     width="560" height="315"></amp-youtube>
-
-Keep in mind that the model was trained on pictures from Patagonia-sponsored athletes and Patagonia store profiles on Instagram. If you try pictures that are a different size than the ones on Instagram (640 x 640 pixels), or you don't take pictures at all like Patagonia-sponsored athletes or Patagonia store profiles, you probably won't get the best results (although generalizing to more image sizes and types of images is definitely on the to-do list)!
 
 ### Contributing to the Google TensorFlow project
 
