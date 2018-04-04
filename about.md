@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 # OVERVIEW
-I am passionate about making a positive impact by creating technology products with my strong blend of technical and business skills. I have 6+ years of experience in the federal public service industry and consumer products industry focusing on technology product development, enterprise architecture, and business intelligence.
+I am passionate about making a positive impact by creating technology products with my strong blend of technical and business skills. I have 8+ years of experience in the federal public service industry and consumer products industry focusing on technology product development, big data/graph analytics, solution architecture, and machine learning.
 
 I also enjoy sports / exercise, travel, cooking/eating, reading, listening to podcasts, and learning new things!
 
@@ -13,18 +13,18 @@ I also enjoy sports / exercise, travel, cooking/eating, reading, listening to po
 
 ### DELOITTE CONSULTING LLP
 
-*2008 - present \| Senior Consultant - Technology Services (previous: Summer Scholar, Business Technology Analyst, Consultant)*
+*2008 - present \| Manager - Technology Services (previous: Summer Scholar, Business Technology Analyst, Consultant, Senior Consultant)*
 
 - Consistent top-performer
-- Engineering Manager of web application development team comprised of on-site and remote members, responsible for managing full application life cycle from strategy to execution (e.g., owning roadmap, backlog management, stakeholder coordination, requirements gathering, design/development, usage analytics, infrastructure management, continuous improvement)
-- BI/Analytics development with Tableau
-- Experience as Certified Scrum Master (Scrum Alliance) and fullstack developer
-- Experience presenting to council of CIOs
+- Engineering lead for interactive network analysis web application. Responsible for a team of 14+ data engineers, data scientists, fullstack engineers, and DevOps engineers
+  - Key solution components: entity resolution, distributed graph database, network visualization
+  - Tech stack: DataStax Enterprise (Cassandra, Spark, Solr, DSE Graph); microservices written using Java, Node.js, AngularJS, and KeyLines; DevOps components include Jenkins and Docker; Infrastructure is a combination of AWS and on-premise
+- Product Manager of web application development team comprised of on-site and remote members, responsible for managing full application life cycle from strategy to execution (e.g., owning roadmap, backlog management, stakeholder coordination, requirements gathering, design/development, usage analytics, infrastructure management, continuous improvement)
+- Experience presenting to client CIOs
+- Developed BI/Analytics solutions with Tableau
 - Led effort to re-architect Oracle APEX web application to support more effective search, performance, and usability using Elasticsearch, Angular, and Node
 - Led SAML single-sign-on implementation for web application
 - Led migration from physical data center infrastructure to private cloud data center infrastructure which saved client over 70% of yearly hosting costs and increased flexibility and scalability of the application
-- Developed strategy for a unified approach to technology software use across the client's organization
-- Responsible for Section 508 accessibility testing
 - Experience leading and supporting large firm initiatives for business development, recruiting, and culture development
 
 ### Metis
@@ -61,6 +61,11 @@ I also enjoy sports / exercise, travel, cooking/eating, reading, listening to po
 
 *2005 - 2009* \| B.S. in Systems Engineering with Highest Distinction
 
+# Certifications
+
+- AWS Certified Solution Architect - Associate (2018)
+- Certified Scrum Master
+
 # TECHNICAL SKILLS
 
 ### DATA SCIENCE
@@ -69,13 +74,11 @@ Machine learning, deep learning, data visualization, NLP, web scraping
 
 ### PRODUCTS / FRAMEWORKS
 
-*Project Experience:* Tableau, Docker, AWS, Git, TensorFlow, JIRA, Node, Angular, Bootstrap CSS, Grunt, Elasticsearch, MySQL, Sublime Text, jQuery, Oracle 11g database, Oracle APEX, Piwik, Shibboleth, Adobe Photoshop, Informatica, ERwin
-
-*Training:* Spark, Hadoop, Mongo DB, D3, Microstrategy BI, SAP Business Objects, SAS BI
+DataStax Enterprise (Cassandra, Spark, Solr, DSE Graph), Pandas, scikit-learn, NLTK, TensorFlow, Zeppelin, Jupyter, Kafka, Tableau, Docker, AWS, Jenkins, Git, JIRA, Node.js, AngularJS, Elasticsearch, Selenium, Oracle 11g database, Piwik, Shibboleth, Informatica
 
 ### DEVELOPMENT LANGUAGES
 
-SQL, JavaScript, Python, CSS/SASS, PL/SQL, Java, HTML, VBA
+SQL, Python, Scala, Java, Bash scripting, JavaScript
 
 # BUSINESS SKILLS
 
