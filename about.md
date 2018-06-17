@@ -63,6 +63,7 @@ I also enjoy sports / exercise, travel, cooking/eating, reading, listening to po
 
 # Certifications
 
+- Databricks Certified Developer - Apache Spark 2.x (2018)
 - AWS Certified Solution Architect - Associate (2018)
 - Certified Scrum Master
 
