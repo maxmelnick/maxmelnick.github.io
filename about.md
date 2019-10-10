@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 # OVERVIEW
-I am passionate about making a positive impact by creating technology products with my strong blend of technical and business skills. I have 8+ years of experience in the federal public service industry and consumer products industry focusing on technology product development, big data/graph analytics, solution architecture, and machine learning.
+I am passionate about making a positive impact by creating technology products with my strong blend of technical and business skills. I have 10+ years of experience in the federal public service industry and consumer products industry focusing on technology product development, big data/graph analytics, solution architecture, and machine learning.
 
 I also enjoy sports / exercise, travel, cooking/eating, reading, listening to podcasts, and learning new things!
 
@@ -18,7 +18,7 @@ I also enjoy sports / exercise, travel, cooking/eating, reading, listening to po
 - Consistent top-performer
 - Engineering lead for interactive network analysis web application. Responsible for a team of 14+ data engineers, data scientists, fullstack engineers, and DevOps engineers
   - Key solution components: entity resolution, distributed graph database, network visualization
-  - Tech stack: DataStax Enterprise (Cassandra, Spark, Solr, DSE Graph); microservices written using Java, Node.js, AngularJS, and KeyLines; DevOps components include Jenkins and Docker; Infrastructure is a combination of AWS and on-premise
+  - Tech stack: DataStax Enterprise (Cassandra, Spark, Solr, DSE Graph), Java, Node.js, AngularJS, KeyLines, Jenkins, Istio, Kubernetes, Docker, and AWS
 - Product Manager of web application development team comprised of on-site and remote members, responsible for managing full application life cycle from strategy to execution (e.g., owning roadmap, backlog management, stakeholder coordination, requirements gathering, design/development, usage analytics, infrastructure management, continuous improvement)
 - Experience presenting to client CIOs
 - Developed BI/Analytics solutions with Tableau
@@ -54,6 +54,14 @@ I also enjoy sports / exercise, travel, cooking/eating, reading, listening to po
 - Developed and implemented training programs and health assessments to improve client physical fitness
 - Created online calendar for Fitness Assessment room reservations
 
+# SPEAKING EXPERIENCE
+
+- [Spark+AI Summit 2019 – Massive-Scale Entity Resolution Using Apache Spark and Graph](https://databricks.com/session/massive-scale-entity-resolution-using-the-power-of-apache-spark-and-graph)
+- [DataStax Distributed Data Podcast Episode 80: Finding Bad Actors with Max Melnick](https://www.youtube.com/watch?v=PHZu-DY6ofY)
+- [Datastax Accelerate 2019 – Massive-Scale Entity Resolution Using Datastax Enterprise](https://www.datastax.com/resources/video/datastax-accelerate-2019-massive-scale-entity-resolution-using-power-datastax)
+- [Datastax Developer Day](https://www.youtube.com/watch?v=Qsd7WfOahgA)
+
+
 # EDUCATION
 
 
@@ -75,7 +83,7 @@ Machine learning, deep learning, data visualization, NLP, web scraping
 
 ### PRODUCTS / FRAMEWORKS
 
-DataStax Enterprise (Cassandra, Spark, Solr, DSE Graph), Pandas, scikit-learn, NLTK, TensorFlow, Zeppelin, Jupyter, Kafka, Tableau, Docker, AWS, Jenkins, Git, JIRA, Node.js, AngularJS, Elasticsearch, Selenium, Oracle 11g database, Piwik, Shibboleth, Informatica
+DataStax Enterprise (Cassandra, Spark, Solr, DSE Graph), Kubernetes, Istio, TensorFlow, Zeppelin, Jupyter, Kafka, Tableau, Docker, AWS, Jenkins, Git, JIRA, Node.js, AngularJS, Elasticsearch, Selenium, Oracle 11g database, Piwik, Shibboleth, Informatica
 
 ### DEVELOPMENT LANGUAGES
 
