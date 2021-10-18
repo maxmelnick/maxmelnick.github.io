@@ -82,8 +82,6 @@ Here's what I think could be improved at the NoMad WeWork:
 - **Noise:** Metis is on the 3rd floor which I think is the most populated floor. As such, common-areas were frequently noisy. This didn't bother me much, but I know it bothered others.
 - **Slow elevator:** the elevator at the 28th St. entrance takes FOREVER. I always used the Madison Avenue entrance which was much faster.
 
-{% include image.html width="685" height="457" src="https://findworkspaces.com/wordpress/wp-content/uploads/2016/04/wework-nomad-coworking-space-new-york-ny.jpg" caption="The 3rd floor common-area at the NoMad WeWork space." %}
-
 # Metis resources and perks
 
 Another thing I liked about the bootcamp was the excellent access to resources and perks.
