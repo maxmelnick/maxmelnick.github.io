@@ -22,8 +22,6 @@ Cassandra is great for storing data when you need...
 * **Fault-tolerance.** Cassandra's data replication and leaderless architecture means you won’t experience any downtime or data loss if a node goes down. You can even deploy Cassandra to be able to withstand the loss of an entire data center or geographic region.
 * **Flexible deployment options.** You can deploy Cassandra on-prem, in the cloud or even a hybrid of the two.
 
-{% include image.html width="956" height="500" src="https://d2h0cx97tjks2p.cloudfront.net/blogs/wp-content/uploads/Cassandra-History.png" caption="History of Apache Cassandra. Image source: https://data-flair.training/blogs/apache-cassandra-tutorial/" %}
-
 Common Cassandra use-cases include...
 
 * Storing time-series data (e.g., logs, IoT sensor data)
