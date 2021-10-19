@@ -13,7 +13,7 @@ For my final Metis project, I developed an application that can improve brand an
 - understanding of the challenges and improve on my work -->
 
 
-{% include image.html width="650" height="344" src="/assets/images/final_project/file-page1.jpg" caption="Title slide of my presentation." %}
+{% include image.html src="assets/images/final_project/file-page1.jpg" caption="Title slide of my presentation." %}
 
 
 ### Why image logo detection?
@@ -21,15 +21,15 @@ For my final Metis project, I developed an application that can improve brand an
 > *“A picture is worth a thousand words”* – almost everyone ever
 
 
-{% include image.html width="650" height="344" src="/assets/images/final_project/file-page2.jpg" %}
+{% include image.html src="assets/images/final_project/file-page2.jpg" %}
 
 
-{% include image.html width="650" height="344" src="/assets/images/final_project/file-page3.jpg" %}
+{% include image.html src="assets/images/final_project/file-page3.jpg" %}
 
 It's not easy for brands to understand who is using their products and how they're using them. One method brands use is surveys. But surveys can be time-consuming, expensive, and have somewhat biased results. Another more scalable solution is text analytics on social media posts, specifically on the captions, comments, tags, and other metadata such as location and user information. However, text analytics rely on manual data entry from users and can miss out on posts that only include the people using the brand's products in an image. To capture these additional image-only posts, a brand can pay someone to manually sift through the torrent of social media image posts and pick out ones that are relevant. Unfortunately, that kind of manual search is expensive and doesn't scale! One way we can create a scalable solution is with a logo detection Convolutional Neural Net model...
 
 
-{% include image.html width="650" height="344" src="/assets/images/final_project/file-page4.jpg" %}
+{% include image.html src="assets/images/final_project/file-page4.jpg" %}
 
 <!-- Advertisers such as Kraft Foods Group Inc. pay Ditto Labs to find their products’ logos in photos on Tumblr and Instagram. The Cambridge, Mass., company’s software can detect patterns in consumer behavior, such as which kinds of beverages people like to drink with macaroni and cheese, and whether or not they are smiling in those images. Ditto Labs places users into categories, such as “sports fans” and “foodies” based on the context of their images. http://www.wsj.com/articles/smile-marketing-firms-are-mining-your-selfies-1412882222
 
@@ -72,7 +72,7 @@ Deep Convolutional Neural Networks (DCNNs) have recently set state-of-the-art ac
 
 ### Designing the logo detector model and app
 
-{% include image.html width="650" height="344" src="/assets/images/final_project/file-page5.jpg" %}
+{% include image.html src="assets/images/final_project/file-page5.jpg" %}
 
 The core of the image logo detection model I developed uses the state-of-the-art Deep Convolutional Neural Net developed by Google, [Inception v3][inception]. Instead of training the Inception v3 model from scratch, I used a technique called [transfer learning](http://www.kdnuggets.com/2015/08/recycling-deep-learning-representations-transfer-ml.html) to retrain the model to classify if an image has a Patagonia `logo` vs. `no-logo`. I used transfer learning because it took significantly less time to train the model and I didn’t need as many training images.
 
@@ -80,7 +80,7 @@ To make the retraining easier, I started with this great [TensorFlow retraining 
 
 Next, let's explore the end-to-end design of the logo detection model and associated web app, including the technical details.
 
-{% include image.html width="650" height="344" src="/assets/images/final_project/file-page6.jpg" %}
+{% include image.html src="assets/images/final_project/file-page6.jpg" %}
 
 ##### Data collection
 
@@ -112,7 +112,7 @@ Check out the _Live app prototype!_ section below for a screencast and link to t
 
 Here’s the technical view, highlighted by TensorFlow and several AWS services:
 
-{% include image.html width="650" height="344" src="/assets/images/final_project/file-page7.jpg" %}
+{% include image.html src="assets/images/final_project/file-page7.jpg" %}
 
 A few notes about the technical architecture:
 
@@ -122,7 +122,7 @@ A few notes about the technical architecture:
 
 ### Evaluating the logo detector model
 
-{% include image.html width="650" height="344" src="/assets/images/final_project/file-page8.jpg" %}
+{% include image.html src="assets/images/final_project/file-page8.jpg" %}
 
 The major challenge with this `logo` vs. `no-logo` classification problem is the class imbalance (i.e., most images don't have a Patagonia logo in it). Initially, my trained models had much poorer `logo` precision and recall than the final model. In order to improve these metrics, I experimented with up-sampling the `logo` class, as well as down-sampling the `no-logo` class, each of which improved the precision and recall on the `logo` class. In the end, the model achieved 77% precision and 40% recall on the `logo` class. There's definitely room for improvement in the next iteration, but still a good start!
 
@@ -130,10 +130,10 @@ The major challenge with this `logo` vs. `no-logo` classification problem is the
 
 Curious which test images the model correctly and incorrectly predicted? Let's take a look:
 
-{% include image.html width="650" height="344" src="/assets/images/final_project/file-page9.jpg" %}
+{% include image.html src="assets/images/final_project/file-page9.jpg" %}
 
 
-{% include image.html width="650" height="344" src="/assets/images/final_project/file-page10.jpg" %}
+{% include image.html src="assets/images/final_project/file-page10.jpg" %}
 
 As you can see, the model struggled dealing with:
 
@@ -143,19 +143,18 @@ As you can see, the model struggled dealing with:
 
 However, sometimes the model was even smarter than me...
 
-{% include image.html width="650" height="344" src="/assets/images/final_project/file-page11.jpg" %}
+{% include image.html src="assets/images/final_project/file-page11.jpg" %}
 
 
 ### App Screencast!
 
-<amp-youtube
-    data-videoid="3ZyQaA58DLY"
-    layout="responsive"
-    width="560" height="315"></amp-youtube>
+{::nomarkdown}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3ZyQaA58DLY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{:/}
 
 ### Contributing to the Google TensorFlow project
 
-{% include image.html width="650" height="344" src="/assets/images/final_project/file-page15.jpg" %}
+{% include image.html src="assets/images/final_project/file-page15.jpg" %}
 
 One of the most exciting parts of my project was being able to contribute code I developed back to the Google TensorFlow project so others can benefit from it. For more information, take a look at my other [post]({% post_url 2016-07-04-visualizing-tensorflow-retrain %}) for more details.
 
@@ -203,7 +202,7 @@ Depending on use-case, tune model to optimize precision or recall -->
 
 ### Conclusion
 
-{% include image.html width="650" height="344" src="/assets/images/final_project/file-page14.jpg" %}
+{% include image.html src="assets/images/final_project/file-page14.jpg" %}
 
 Combining the power of Deep Convolutional Neural Networks, like the logo detector model I developed, with existing text analytics capabilities presents an opportunity for brands to discover new insights about their customers and how customers use their products.
 

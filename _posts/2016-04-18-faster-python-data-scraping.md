@@ -138,7 +138,7 @@ plotPerformance(performance_results)
 ~~~
 
 
-<amp-img width="424" height="386" layout="responsive" src="/assets/images/http-optimization/base.png"></amp-img>
+{% include image.html src="assets/images/http-optimization/base.png" %}
 
 
 As you can see, the time to complete all http requests directly increases with an increase in `N` http requests. Translation: Need to make a lot of separate `requests.get()` calls? You're going to have to wait a while. Let's see if we can do better...
@@ -178,7 +178,7 @@ plotPerformance(performance_results)
 ~~~
 
 
-<amp-img width="437" height="386" layout="responsive" src="/assets/images/http-optimization/base_v_session.png"></amp-img>
+{% include image.html src="assets/images/http-optimization/base_v_session.png" %}
 
 
 Based on the results, using `requests.Sessions()` on repeated http requests improves the performance significantly. For example, using `Sessions` takes ~60% as much time as using repeated `requests.get()` (~70 seconds vs. ~110 seconds).
@@ -221,7 +221,7 @@ plotPerformance(performance_results)
 ~~~
 
 
-<amp-img width="436" height="386" layout="responsive" src="/assets/images/http-optimization/base_v_session_v_pooling.png"></amp-img>
+{% include image.html src="assets/images/http-optimization/base_v_session_v_pooling.png" %}
 
 
 Now we're talking! Using `gevent.pool` seems to significantly improve the speed with which we can make repeated http requests, without much additional cost in time as `N` increases.
@@ -263,7 +263,7 @@ plotPerformance(performance_results)
 ~~~
 
 
-<amp-img width="479" height="386" layout="responsive" src="/assets/images/http-optimization/compare_all.png"></amp-img>
+{% include image.html src="assets/images/http-optimization/compare_all.png" %}
 
 
 Based on the simulated data, combining `requests.Session()` and `gevent.pool` doesn't improve much on simply `gevent.pool`.

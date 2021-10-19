@@ -23,7 +23,7 @@ One of my favorite parts of the bootcamp was working with and getting to know my
 
 Our cohort was very friendly and social. Everyone was very supportive, always trying to help others or share best practices. We also found some time to socialize with each other. Almost every day there was a group of people that went out to lunch. There were also happy-hours, adventures to get ice cream, coffee breaks, Meetups, and much more.
 
-{% include image.html width="650" height="371" src="/assets/images/metis_experience/grad.jpg" caption="Our DS7 cohort after our final presentations." %}
+{% include image.html src="assets/images/metis_experience/grad.jpg" caption="Our DS7 cohort after our final presentations." %}
 
 In addition to our cohort, we had a good amount of exposure to the Metis alumni which I found very valuable. Alumni frequently hung out at Metis, working on Kaggle competitions, continuing their passion projects, or strategizing their job search. Having alumni accessible almost every day made it easier to brainstorm project ideas, troubleshoot problems. Alumni also gave us insight into what to expect not only during the bootcamp, but also after.
 
@@ -64,7 +64,7 @@ One thing I was wondering before coming to Metis was what the workload is like o
 
 Metis NYC holds class at the NoMad (North of Madison Square Park) [WeWork](https://www.wework.com/locations/new-york-city/nomad). I really liked being located in NoMad because it is close to Madison Square Park which allowed us to hang out in the park on nice days - something especially nice during Spring in NYC. I also liked that there is a good amount of lunch options in NoMad, from Eataly and Shake Shack to Dig Inn and all the Korea Town restaurants. It was also walking distance from my apartment which was a huge plus!
 
-{% include image.html width="650" height="344" src="/assets/images/metis_experience/park_lunch.jpg" caption="Eating lunch with other classmates in Madison Square Park." %}
+{% include image.html src="assets/images/metis_experience/park_lunch.jpg" caption="Eating lunch with other classmates in Madison Square Park." %}
 
 
 If you've never worked in and/or heard of [WeWork](https://www.wework.com/), I'm sure you're wondering: what's it like to work there?

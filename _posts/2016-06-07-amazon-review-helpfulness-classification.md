@@ -5,7 +5,7 @@ title: Project 3 - Can we predict if an Amazon review will be helpful or not?
 
 For project 3, code-named "McNulty," the goal was to gain exposure to classification methods, understanding of their use, and practice implementing them using scikit-learn. For my project, I chose to classify if an Amazon Kindle Review would be helpful or not-helpful.
 
-<amp-img width="400" height="224" layout="responsive" src="https://media.giphy.com/media/xTiTnuISWBtO3djSCs/giphy.gif"></amp-img>
+{% include image.html src="https://media.giphy.com/media/xTiTnuISWBtO3djSCs/giphy.gif" %}
 
 
 ### Even if we can predict review helpfulness, so what?
@@ -29,7 +29,7 @@ To help understand what I mean by "helpfulness," let's take a look at how Amazon
 
 As seen in the image below, Amazon allows users to click a button on each review to indicate whether it was helpful or not-helpful.
 
-<amp-img width="650" height="397" layout="responsive" src="/assets/images/03-project/review.png"></amp-img>
+{% include image.html src="assets/images/03-project/review.png" %}
 
 #### Defining review helpfulness
 
@@ -60,14 +60,14 @@ To classify reviews as helpful or not-helpful, I used the following features:
 
 To determine the best classifier, I ran different classification algorithms (LogisticRegression, KNeighborsClassifier, DecisionTreeClassifier, RandomForestClassifier, and GaussianNB) using sklearn and compared the results using a [ROC curve](https://en.wikipedia.org/wiki/Receiver_operating_characteristic). The image below shows that the logistic regression classifier performs the best with respect to maximizing area under the ROC curve.
 
-<amp-img width="650" height="433" layout="responsive" src="/assets/images/03-project/roc_curve.png"></amp-img>
+{% include image.html src="assets/images/03-project/roc_curve.png" %}
 
 
 ### Final model test results
 
 Let's drill down on the logistic regression results since it performed the best relative to the other classifiers. The image below shows the confusion matrix for the logistic regression classifier results on the test data set.
 
-<amp-img width="650" height="246" layout="responsive" src="/assets/images/03-project/confusion_matrix.png"></amp-img>
+{% include image.html src="assets/images/03-project/confusion_matrix.png" %}
 
 As you can see, precision and recall are high for the helpful class which is expected given the significantly higher number of helpful reviews in the test set (13577 helpful reviews vs. 2801 not-helpful reviews). Precision and recall are low for the not-helpful class, but are an improvement on using a baseline dummy classifier that predicts helpful each time which would result in 0% precision and 0% recall to the not-helpful class.
 
@@ -79,7 +79,7 @@ Want to compare your ability to predict if a review is helpful vs. the logistic 
 
 Here's a screenshot of the app:
 
-<amp-img width="650" height="504" layout="responsive" src="/assets/images/03-project/app_screenshot.png"></amp-img>
+{% include image.html src="assets/images/03-project/app_screenshot.png" %}
 
 
 ### Conclusion

@@ -1,6 +1,6 @@
 {::nomarkdown}
 <figure class="image">
-<amp-img height="{{ include.height }}" width="{{ include.width }}" src="{{ include.src }}" layout="responsive" alt="{{ include.caption }}" style="background-color: inherit;"></amp-img>
+<img {% if include.height %} height="{{ include.height }}"{% endif %} {% if include.width %} width="{{ include.width }}"{% endif %} src="{% if include.src contains "://" %}{{ include.src }}{% else %}{{ site.baseurl }}/{{ include.src }}{% endif %}" layout="responsive" alt="{{ include.caption }}" style="background-color: inherit; min-width: 100%;"></img>
 {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
 </figure>
 {:/}

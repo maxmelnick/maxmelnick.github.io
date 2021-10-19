@@ -80,7 +80,7 @@ Open a browser to `http://localhost:8888` and you will see the Jupyter home page
 
 Once you have the Jupyter home page open, create a new Jupyter notebook using either `Python 2` or `Python 3`.
 
-<amp-img width="650" height="264" layout="responsive" src="/assets/images/docker-spark/new_jupyter_notebook.png"></amp-img>
+{% include image.html src="assets/images/docker-spark/new_jupyter_notebook.png" %}
 
 In the first cell, run the following code. The result should be five integers randomly sampled from 0-999, but not necessarily the same as what's below.
 
