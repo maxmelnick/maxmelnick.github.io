@@ -11,7 +11,7 @@ Along the journey, I'll fill you in on...
 - Tips and techniques for better collecting/analysing/visualizing data
 - The NYC experience (hopefully including where to get the best egg sandwich, cheese plate, and milk shake)
 
-<amp-img width="500" height="202" layout="responsive" src="https://pccsula.files.wordpress.com/2015/08/cut_ribbon.gif"></amp-img>
+{% include image.html src="https://pccsula.files.wordpress.com/2015/08/cut_ribbon.gif" %}
 
 ### About Me
 
@@ -30,8 +30,6 @@ I also enjoy sports / exercise, travel, cooking/eating, and most importantly, le
 **What is Data Science?**
 
 The simplest way I can explain Data Science is that it's the practice of extracting valuable insights from data using a combination of math, computer science, and business domain knowledge, as shown in the following venn diagram.
-
-<div class="center-img"><amp-img width="414" height="428" layout="responsive" src="http://static1.squarespace.com/static/54022945e4b02005531a9c9e/t/54fc82ffe4b0c724169fe392/1425834751943/?format=1500w"></amp-img></div>
 
 Data Science has been [around for a long time](http://dataconomy.com/beginners-guide-history-data-science/), but with the [significant growth of data](http://www.forbes.com/sites/bernardmarr/2015/09/30/big-data-20-mind-boggling-facts-everyone-must-read/#6d978c9b6c1d), there's a big growth in demand for Data Scientists that can generate valuable insights from all the ["Big Data"](https://en.wikipedia.org/wiki/Big_data).
 
@@ -69,12 +67,12 @@ Still love DC
 Timing
 Have flexibility in life right now that I probably will never have again
 
-<div class="center-img"><amp-img width="400" height="400" src="http://cdn.meme.am/instances/60565932.jpg"></amp-img></div> -->
+<div class="center-img"><img width="400" height="400" src="http://cdn.meme.am/instances/60565932.jpg"></img></div> -->
 
 
 **The Program**
 
-<amp-img width="399" height="201" layout="responsive" src="http://i.imgur.com/G5gf6lo.gif?noredirect"></amp-img>
+{% include image.html src="http://i.imgur.com/G5gf6lo.gif?noredirect" %}
 
 The Bootcamp started April 4th 2016, is in-person in NYC for 12 weeks, Monday through Friday, from 9 am - 6 pm and costs $14,000 (**UPDATE:** The cost increased to $15,500 on June 20, 2016). Going into the Bootcamp, you are expected to have experience writing code and studying/using statistics. The application process (online application, coding challenge, and Skype interview) helps control for these prerequisites.
 

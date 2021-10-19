@@ -32,7 +32,7 @@ We recommended the non-profit do an initial "test" round with limited volunteers
 
 **Average Station Traffic (Entries + Exits) for Top Nine Stations by Total Volume**
 Based on MTA data from 2/21/2016 - 4/2/2016
-<amp-img width="720" height="720" layout="responsive" src="/assets/images/01-project/heatmap.png"></amp-img>
+{% include image.html src="assets/images/01-project/heatmap.png" %}
 
 The reason we recommended a "test" round is it would allow the non-profit to learn a significant amount of important information that was missing from our analysis (e.g., Is Union Square really a good place to hand out flyers? What entrance/exit to the station is best for volunteers to stand? Are there other groups competing for people's attention? What types of people show the most interest?). If the "test" round is unsuccessful, the non-profit can change their focus to different subway stops without having wasted too much time. On the other hand, if the "test" round is successful, the non-profit can expand their flyer distribution with additional volunteers.
 
@@ -61,7 +61,7 @@ except:
 
 **Key components of the Data Science "toolkit"**
 
-<amp-img width="700" height="98" layout="responsive" src="/assets/images/01-project/logos.png"></amp-img>
+{% include image.html src="assets/images/01-project/logos.png" %}
 
 ### Project source
 

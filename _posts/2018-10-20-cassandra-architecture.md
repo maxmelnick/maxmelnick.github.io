@@ -5,7 +5,7 @@ title: An Introduction to Apache Cassandra for Architects, Ops, and Developers
 
 **tl/dr:** Apache Cassandra is a NoSQL database with flexible deployment options that’s highly performant (especially for writes), scalable, fault-tolerant, and proven in production. Common use-cases include IoT, messaging, and fraud detection. You probably shouldn't use Cassandra if you have a small dataset, have highly transactional data, or need to do joins/aggregations without other tools. Alternative NoSQL databases include Amazon DynamoDB, Apache HBase, and MongoDB.
 
-{% include image.html width="956" height="640" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Cassandra_logo.svg/2000px-Cassandra_logo.svg.png" %}
+{% include image.html src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Cassandra_logo.svg/2000px-Cassandra_logo.svg.png" %}
 
 In this post, I'll introduce you to Apache Cassandra, a tool I've been using in Production over the last two years. I'll provide an overview of what Cassandra is, when you should use it, when you shouldn't use it, and some alternatives.
 

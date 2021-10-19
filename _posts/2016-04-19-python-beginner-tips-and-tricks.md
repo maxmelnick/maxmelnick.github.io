@@ -56,7 +56,7 @@ But first...something key to be aware of: Jupyter Notebooks have two different k
 
 Want quick access to all the commands in Jupyter Notebooks? Open the command palette with `cmd` + `shift` + `p` and you'll quickly be able to search all the commands!
 
-<amp-img width="700" height="169" layout="responsive" src="/assets/images/keyboard-shortcuts/command_palette.png"></amp-img>
+{% include image.html src="assets/images/keyboard-shortcuts/command_palette.png" %}
 
 #### View all keyboard shortcuts
 
@@ -64,7 +64,7 @@ Want quick access to all the commands in Jupyter Notebooks? Open the command pal
 
 Forget what that keyboard shortcut is? Type `H` in Command mode for a list of all available keyboard shortcuts.
 
-<amp-img width="700" height="256" layout="responsive" src="/assets/images/keyboard-shortcuts/keyboard_shortcuts.png"></amp-img>
+{% include image.html src="assets/images/keyboard-shortcuts/keyboard_shortcuts.png" %}
 
 ## Text snippets
 

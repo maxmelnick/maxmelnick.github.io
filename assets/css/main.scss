@@ -1,0 +1,30 @@
+---
+# Add a comment to make this file sass-y.
+# Change this file for any custom CSS.
+---
+
+/* We need to add display:inline in order to align the '>>' of the 'read more' link */
+.post-excerpt p {
+	display:inline;
+}
+
+.center-img {
+	text-align: center
+}
+
+.img-circle {
+	border-radius: 50%;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.about p, .about li {
+	letter-spacing: -0.02em;
+    line-height: 1.59;
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+	"syntax",
+    "starsnonscss"
+;

@@ -1,3 +1,3 @@
 # Max's Personal Blog
 
-*Built using Jekyll and Google AMP using [this template](https://github.com/ageitgey/amplify)*
+*Built using Jekyll and [Mediumish - Jekyll Theme](https://wowthemesnet.github.io/mediumish-theme-jekyll/)*

@@ -5,19 +5,19 @@ title: Project 2 - Predicting Oscar Nominations
 
 In project 1, we focused on learning the fundamental components of the Data Science "toolkit" by analyzing NYC MTA Subway data. In project 2, code-named Project Luther, we built on those fundamentals and learned new concepts and analysis techniques such as web data scraping and linear regression to predict something about the movie industry. I decided to focus on trying to predict the number of Oscar nominations for a movie.
 
-<amp-img width="500" height="213" layout="responsive" src="https://media.giphy.com/media/6mnlYDQ4VdbUs/giphy.gif"></amp-img>
+{% include image.html src="https://media.giphy.com/media/6mnlYDQ4VdbUs/giphy.gif" %}
 
 ### Data wrangling
 
 I spent a majority of my time getting my hands dirty collecting, exploring, cleaning, and transforming the movie data. I obtained the data by scraping [Box Office Mojo](http://www.boxofficemojo.com/) and joining that with data I collected from the [Open Movie Database (OMDB) API](http://omdbapi.com/). The image below shows the evolution of the data from the raw movie data to the data I used to run the linear regression model.
 
-<amp-img width="1000" height="589" layout="responsive" src="/assets/images/movie-scraping/data_evolution2.png"></amp-img>
+{% include image.html src="assets/images/movie-scraping/data_evolution2.png" %}
 
 The final dataset I ended up using for my model only contained 516 movies of the original 9,000+ movies I collected from Box Office Mojo. This was because I tried to simplify the analysis by focusing only on movies that had at least one nomination and filtering movies with null values.
 
 ### The model
 
-<amp-img width="479" height="281" layout="responsive" src="http://38.media.tumblr.com/388c156672facd32502c6f94845b2f3e/tumblr_ncfeyjjvRG1sn2bh3o1_500.gif"></amp-img>
+{% include image.html src="http://38.media.tumblr.com/388c156672facd32502c6f94845b2f3e/tumblr_ncfeyjjvRG1sn2bh3o1_500.gif" %}
 
 No! Not that kind of model! I'm talking about the final linear regression model I used to predict the number of Oscar nominations for a movie.
 
@@ -34,8 +34,6 @@ After iterating over many different models, I settled on the following model for
 
 ### This Oscar nomination prediction business isn't as easy as it sounds
 
-<amp-img width="287" height="150" layout="responsive" src="http://popcrush.com/files/2014/03/JLawFall.gif"></amp-img>
-
 The final linear regression model I developed was not a robust basis for prediction given the `R-squared` value of 0.426. However, there are a few conclusions we can draw from the model results:
 
 - **Season:** Fall/Winter have positive effect
@@ -48,7 +46,7 @@ Here are my major takeaways from project 2.
 
 ##### The importance of speed when working with large data sets
 
-<amp-img width="375" height="165" layout="responsive" src="http://gifstumblr.com/images/going-fast_574.gif"></amp-img>
+{% include image.html src="http://gifstumblr.com/images/going-fast_574.gif" %}
 
 Overall, being able to collect data quicker allowed me to experiment with more data sets and models. Here are some techniques I used to help speed up my analysis.
 
@@ -105,8 +103,6 @@ def addPrevDirectorNoms(df):
     # return the new dataframe that has the previous nominations added as a column
     return prev_noms
 ~~~
-
-<amp-img width="359" height="151" layout="responsive" src="http://www.sharegif.com/wp-content/uploads/2013/11/Gladiator-quotes-1.gif"></amp-img>
 
 ##### Additional familiarity with the Data Science "toolkit"
 

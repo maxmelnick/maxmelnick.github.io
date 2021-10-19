@@ -21,9 +21,9 @@ Before I added TensorBoard summaries to the TensorFlow image classification [tut
 
 The stock TensorFlow tutorial code did a great job of printing model performance to the console such as accuracy and cross entropy. However, it was difficult to understand how the model was performing over time, especially when you trained the model for thousands of steps. Is the model converging? Is the model overfitting the data? It was difficult to select the optimal model parameters without answers to those questions. Additionally, those questions got even more difficult to answer when comparing the model performance across different parameter combinations!
 
-<!-- <amp-img width="650" height="216" layout="responsive" src="/assets/images/image_retraining/text_stats.png"></amp-img> -->
+<!-- <img width="650" height="216" layout="responsive" src="assets/images/image_retraining/text_stats.png"></img> -->
 
-{% include image.html width="650" height="216" src="/assets/images/image_retraining/text_stats.png" caption="It's difficult to analyze model training performance over time when the output is only text." %}
+{% include image.html src="assets/images/image_retraining/text_stats.png" caption="It's difficult to analyze model training performance over time when the output is only text." %}
 
 <!-- [Show before pics comparing text for multiple runs] -->
 
@@ -49,9 +49,9 @@ Once you execute the retraining according to the [tutorial][tutorial], visualizi
 
 Once TensorBoard is running, selecting the `EVENTS` tab allows you to visualize the change in model statistics such as accuracy and cross entropy.
 
-<!-- <amp-img width="650" height="609" layout="responsive" src="/assets/images/image_retraining/events.png"></amp-img> -->
+<!-- <img width="650" height="609" layout="responsive" src="assets/images/image_retraining/events.png"></img> -->
 
-{% include image.html width="650" height="609" src="/assets/images/image_retraining/events.png" caption="TensorBoard EVENTS tab." %}
+{% include image.html src="assets/images/image_retraining/events.png" caption="TensorBoard EVENTS tab." %}
 
 <!-- Show screenshots of before (with only text) and after (with TensorBoard)
 - screenshot of overfitting?
@@ -59,9 +59,9 @@ Once TensorBoard is running, selecting the `EVENTS` tab allows you to visualize 
 
 You can select the `HISTOGRAMS` tab to visualize the retraining layer weights, biases, activations, etc.
 
-<!-- <amp-img width="650" height="431" layout="responsive" src="/assets/images/image_retraining/histograms.png"></amp-img> -->
+<!-- <img width="650" height="431" layout="responsive" src="assets/images/image_retraining/histograms.png"></img> -->
 
-{% include image.html width="650" height="431" src="/assets/images/image_retraining/histograms.png" caption="TensorBoard HISTOGRAMS tab." %}
+{% include image.html src="assets/images/image_retraining/histograms.png" caption="TensorBoard HISTOGRAMS tab." %}
 
 ## Comparing model training performance across multiple model parameter combinations
 
@@ -87,17 +87,17 @@ In this training run, let's set the `learning_rate` to 0.001.
 
 In the image below, you can easily see how changing the `learning_rate` from 0.01 to 0.001 affects the model training.
 
-<!-- <amp-img width="650" height="584" layout="responsive" src="/assets/images/image_retraining/compare.png"></amp-img> -->
+<!-- <img width="650" height="584" layout="responsive" src="assets/images/image_retraining/compare.png"></img> -->
 
-{% include image.html width="650" height="584" src="/assets/images/image_retraining/compare.png" caption="TensorBoard EVENTS tab comparing a learning rate of 0.01 (run 1) to 0.001 (run 2)." %}
+{% include image.html src="assets/images/image_retraining/compare.png" caption="TensorBoard EVENTS tab comparing a learning rate of 0.01 (run 1) to 0.001 (run 2)." %}
 
 ## Viewing model architecture in TensorBoard
 
 Selecting the `GRAPH` tab allows you to view an interactive diagram of the Inception v3 model architecture that was modified for retraining.
 
-<!-- <amp-img width="650" height="588" layout="responsive" src="/assets/images/image_retraining/graph.png"></amp-img> -->
+<!-- <img width="650" height="588" layout="responsive" src="assets/images/image_retraining/graph.png"></img> -->
 
-{% include image.html width="650" height="588" src="/assets/images/image_retraining/graph.png" caption="TensorBoard GRAPH tab." %}
+{% include image.html src="assets/images/image_retraining/graph.png" caption="TensorBoard GRAPH tab." %}
 
 
 # Visualizing other TensorFlow models with TensorBoard
