@@ -9,7 +9,6 @@ google_analytics: 'UA-67034229-1'
 disqus: ''
 mailchimp-list: ''
 include: ["_pages"]
-permalink: /:title/
 
 # Authors
 authors:
