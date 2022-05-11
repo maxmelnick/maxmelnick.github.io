@@ -14,7 +14,7 @@ permalink: /about/
 
 {::nomarkdown}
 <p>
-	<a id="resume-download-button" class="btn btn-primary btn-download" href="http://bit.ly/maxjmelnickresume">
+	<a id="resume-download-button" class="btn btn-primary btn-download" href="https://www.dropbox.com/s/9jhlr2od9k2kmgk/Max%20Melnick%20Resume.pdf?dl=0">
 	    Download Resume
 	</a>
 </p>
